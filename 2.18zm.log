@@ -1,0 +1,412 @@
+nohup: ignoring input
+>>> Cleaning up old processes...
+>>> Starting Server for PeMSD4FLOW...
+Server PID: 1459. Logs -> logs/server.log
+>>> Starting Client 1 / 5 ...
+>>> Starting Client 2 / 5 ...
+>>> Starting Client 3 / 5 ...
+>>> Starting Client 4 / 5 ...
+>>> Starting Client 5 / 5 ...
+>>> All Clients started. Now watching Server log...
+[Agent] Initialized: Event-Aware Logic Mode.
+Server initialized on cuda:0. Waiting for 5 clients...
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.1}
+    Final Norm Weights: [0.238, 0.238, 0.238, 0.238, 0.048]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.1}
+    Final Norm Weights: [0.238, 0.238, 0.238, 0.238, 0.048]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.1}
+    Final Norm Weights: [0.238, 0.238, 0.238, 0.238, 0.048]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.059, 0.059, 0.294, 0.294, 0.294]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.1, '1': 0.1, '2': 0.1, '3': 0.1, '4': 0.1}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+>>> [Logic-Driven Aggregation]
+    LLM Scores: {'0': 0.5, '1': 0.5, '2': 0.5, '3': 0.5, '4': 0.5}
+    Final Norm Weights: [0.2, 0.2, 0.2, 0.2, 0.2]
