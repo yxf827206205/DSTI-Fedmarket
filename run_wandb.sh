@@ -13,12 +13,12 @@ set -e
 
 # ================= 配置区域 (可修改) =================
 DATASET="${1:-METR_LA}"        # 默认跑 METR_LA
-DEVICE="${2:-cuda:0}"          # 默认 GPU
-NUM_CLIENTS=5
-SERVER_PORT=50030
+DEVICE="${2:-cuda:1}"          # 默认 GPU (cuda:1 has more VRAM)
+NUM_CLIENTS=${3:-5}           # 可通过第3个参数覆盖
+SERVER_PORT=${4:-50030}       # 可通过第4个参数覆盖
 COMPRESSION=0.10
 LOCAL_EPOCHS=4
-WANDB_PROJECT="STCIM-Fed"     # wandb 项目名
+WANDB_PROJECT="STCIM-Fed-v2"  # wandb 项目名
 WANDB_ENTITY="yxf827206205-shandong-university"    # wandb team 名
 
 # 根据数据集自动设置参数
@@ -48,8 +48,9 @@ case $DATASET in
         NODE_NUM=307
         DSP=32
         DSU=32
-        WINDOW=6
-        HORIZON=1
+        WINDOW=12
+        HORIZON=9
+        NUM_CLIENTS=${3:-8}
         ;;
     PeMSD4OCCUPANCY)
         NODE_NUM=307
@@ -105,28 +106,31 @@ echo "  wandb Project: $WANDB_PROJECT"
 echo "  wandb Entity:  $WANDB_ENTITY"
 echo "=============================================="
 
-# 0. 清理旧进程
-echo ">>> Cleaning up old processes..."
-pkill -u $USER -9 -f "server.py" 2>/dev/null || true
-pkill -u $USER -9 -f "client.py" 2>/dev/null || true
-sleep 2
+# 0. 清理旧进程 (跳过如果 SKIP_CLEANUP=1)
+if [ "${SKIP_CLEANUP}" != "1" ]; then
+    echo ">>> Cleaning up old processes..."
+    pkill -u $USER -9 -f "server.py" 2>/dev/null || true
+    pkill -u $USER -9 -f "client.py" 2>/dev/null || true
+    sleep 2
+fi
 
-mkdir -p logs
-rm -f logs/*.log
+LOG_DIR="logs/${DATASET}_$(date +%Y%m%d_%H%M%S)"
+mkdir -p "$LOG_DIR"
+echo "  Log Dir:       $LOG_DIR"
 
 # 1. 启动服务器
 echo ">>> Starting Server for $DATASET..."
-python -u server.py \
+nohup python -u server.py \
   -n $NUM_CLIENTS \
   -p $SERVER_PORT \
   -i 127.0.0.1 \
   -N $NODE_NUM \
   -dsp $DSP \
   -dsu $DSU \
-  --device $DEVICE > logs/server.log 2>&1 &
+  --device $DEVICE > "$LOG_DIR/server.log" 2>&1 &
 
 SERVER_PID=$!
-echo "Server PID: $SERVER_PID. Logs -> logs/server.log"
+echo "Server PID: $SERVER_PID. Logs -> $LOG_DIR/server.log"
 sleep 10
 
 # 2. 启动客户端 (带 wandb)
@@ -136,7 +140,7 @@ do
 
     WANDB_RUN_NAME="${DATASET}_c${i}_$(date +%m%d_%H%M)"
 
-    python -u client.py \
+    nohup python -u client.py \
       $DATASET "FED" 0 0 0 0 0 0 0 0 0 $DEVICE \
       --cid $i \
       --fedavg \
@@ -155,7 +159,7 @@ do
       --wandb_project "$WANDB_PROJECT" \
       --wandb_entity "$WANDB_ENTITY" \
       --wandb_run_name "$WANDB_RUN_NAME" \
-      > logs/client_$i.log 2>&1 &
+      > "$LOG_DIR/client_$i.log" 2>&1 &
 
     sleep 3
 done
@@ -163,5 +167,9 @@ done
 echo ""
 echo ">>> All $NUM_CLIENTS clients started with wandb logging!"
 echo ">>> View wandb dashboard: https://wandb.ai"
-echo ">>> Watching server log..."
-tail -f logs/server.log
+if [ "${SKIP_TAIL}" != "1" ]; then
+    echo ">>> Watching server log..."
+    tail -f "$LOG_DIR/server.log"
+else
+    echo ">>> Logs at: $LOG_DIR/"
+fi

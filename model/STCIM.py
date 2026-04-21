@@ -223,6 +223,24 @@ class AdaptiveFeatureGate(nn.Module):
         out = (stacked * gates).sum(dim=-1)        # (B, T, N, D)
         return out
 
+# ================= [Simplified] GCN Fusion Gate =================
+class GCNFusionGate(nn.Module):
+    """可学习门控：根据输入动态平衡主路径与GCN路径的贡献"""
+    def __init__(self, d_in=2):
+        super().__init__()
+        self.gate = nn.Sequential(
+            nn.Linear(d_in, 8),
+            nn.ReLU(inplace=True),
+            nn.Linear(8, 1),
+            nn.Sigmoid()
+        )
+
+    def forward(self, main_out, gcn_out):
+        # main_out, gcn_out: (B, T, N, 1)
+        combined = torch.cat([main_out, gcn_out], dim=-1)  # (B, T, N, 2)
+        alpha = self.gate(combined)  # (B, T, N, 1)
+        return alpha * main_out + (1 - alpha) * gcn_out
+
 # ----------------- 辅助类 (gtnet 等保持不变) -----------------
 class gtnet(nn.Module):
     def __init__(self, gcn_true, buildA_true, gcn_depth, num_nodes, device, predefined_A=None, static_feat=None, dropout=0.3, subgraph_size=20, node_dim=40, dilation_exponential=1, conv_channels=32, residual_channels=32, skip_channels=64, end_channels=128, seq_length=12, in_dim=2, out_dim=12, layers=3, propalpha=0.05, tanhalpha=3, layer_norm_affline=True):
@@ -345,30 +363,33 @@ class STCIMwithGCN(nn.Module):
         self.MLPB = MLPModule(args, self.dsp + self.dsu, 1, dropout=0.1, name="MLPB")
         self.MLPC = MLPModule(args, 64, 1, dropout=0.1, name="MLPC")
 
-        # [Innovation 1] Temporal Self-Attention on temporal embedding
+        # Temporal Self-Attention on temporal embedding
         d_tem = self.tod_embedding_dim + self.dow_embedding_dim
         d_spa = self.dsp + self.dsu
-        # Cross-attention output dimension
-        self.d_cross = d_tem + d_spa  # keep same total dim for compatibility
+        self.d_cross = d_tem + d_spa
         
         self.temporal_sa = TemporalSelfAttention(d_tem, n_heads=2, dropout=0.1)
 
-        # [Innovation 2] Cross-Attention Fusion replaces simple concat for ST embedding
-        self.cross_attn_fusion = CrossAttentionFusion(d_spa, d_tem, self.d_cross, n_heads=2, dropout=0.1)
+        # ST fusion: simple concat + projection (stable & effective)
+        self.st_proj = nn.Linear(d_tem + d_spa, self.d_cross)
+        self.st_norm = nn.LayerNorm(self.d_cross)
 
         self.MLPD = MLPModule(args, self.d_cross, 1, dropout=0.1, name="MLPD")
 
-        # [Innovation 3] Adaptive Feature Gate fuses (st_emb, data_emb, gcn_out)
-        # All streams projected to a common dimension
-        self.d_fuse = self.d_cross  # common dimension for gating
-        self.data_proj_gate = nn.Linear(64, self.d_fuse)
-        self.feature_gate = AdaptiveFeatureGate(n_streams=2, d_feature=self.d_fuse, reduction=4)
+        # Feature fusion: concat + projection
+        self.d_fuse = self.d_cross
+        self.data_proj = nn.Linear(64, self.d_fuse)
+        self.fuse_proj = nn.Linear(self.d_fuse * 2, self.d_fuse)
+        self.fuse_norm = nn.LayerNorm(self.d_fuse)
 
         self.MLPE = MLPModule(args, self.d_fuse, 3, dropout=0.1, name="MLPE")
         self.MLPF = MLPModule(args, self.in_steps, 2, dropout=0, name="MLPF")
         
         self.steps_linear = nn.Linear(self.in_steps, self.out_steps)
         self.out_linear = nn.Linear(self.d_fuse, 1)
+
+        # GCN fusion gate
+        self.gcn_fusion_gate = GCNFusionGate(d_in=2)
 
         self.data_l = nn.Parameter(torch.randn(64))
         self.tod_embedding_l = nn.Parameter(torch.randn(self.tod_embedding_dim))
@@ -417,16 +438,18 @@ class STCIMwithGCN(nn.Module):
         spa_emb = spa_emb.repeat(1, self.in_steps, 1, 1)  
         spa_emb = self.MLPB(spa_emb)
         
-        # [Innovation 2] Cross-Attention Fusion (replaces simple concat)
-        st_emb = self.cross_attn_fusion(spa_emb, tem_emb)  # (B, T, N, d_cross)
+        # ST fusion: concat + projection
+        st_emb = torch.cat([spa_emb, tem_emb], dim=-1)  # (B, T, N, d_spa+d_tem)
+        st_emb = self.st_norm(F.relu(self.st_proj(st_emb)))  # (B, T, N, d_cross)
         st_emb = self.MLPD(st_emb)
         
         x = self.data_embedding(x)
         x = self.MLPC(x)
 
-        # [Innovation 3] Adaptive Feature Gate
-        x_proj = self.data_proj_gate(x)  # project data to same dim as st_emb
-        step = self.feature_gate(st_emb, x_proj)  # (B, T, N, d_fuse)
+        # Feature fusion: concat + projection
+        x_proj = self.data_proj(x)  # (B, T, N, d_fuse)
+        step = torch.cat([st_emb, x_proj], dim=-1)  # (B, T, N, d_fuse*2)
+        step = self.fuse_norm(F.relu(self.fuse_proj(step)))  # (B, T, N, d_fuse)
         
         step = self.MLPE(step)
         step = step.permute(0, 3, 2, 1)
@@ -434,7 +457,7 @@ class STCIMwithGCN(nn.Module):
         step = self.steps_linear(step)
         step = step.permute(0, 3, 2, 1)
         out = self.out_linear(step)
-        out = out + x_gcn
+        out = self.gcn_fusion_gate(out, x_gcn)
         return out
         
     def comm_socket(self, msg, device=None):
@@ -455,15 +478,21 @@ class STCIMwithGCN(nn.Module):
         model_dict = self.comm_socket(self.steps_linear.state_dict())
         self.steps_linear.load_state_dict(model_dict)
         
-        # [Innovation] 新增模块的联邦聚合
+        # 新增模块的联邦聚合
         model_dict = self.comm_socket(self.temporal_sa.state_dict())
         self.temporal_sa.load_state_dict(model_dict)
-        model_dict = self.comm_socket(self.cross_attn_fusion.state_dict())
-        self.cross_attn_fusion.load_state_dict(model_dict)
-        model_dict = self.comm_socket(self.feature_gate.state_dict())
-        self.feature_gate.load_state_dict(model_dict)
-        model_dict = self.comm_socket(self.data_proj_gate.state_dict())
-        self.data_proj_gate.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.st_proj.state_dict())
+        self.st_proj.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.st_norm.state_dict())
+        self.st_norm.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.data_proj.state_dict())
+        self.data_proj.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.fuse_proj.state_dict())
+        self.fuse_proj.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.fuse_norm.state_dict())
+        self.fuse_norm.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.gcn_fusion_gate.state_dict())
+        self.gcn_fusion_gate.load_state_dict(model_dict)
         
         logits_to_send = None
         if hasattr(self, 'current_logits'):

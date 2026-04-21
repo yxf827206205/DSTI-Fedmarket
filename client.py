@@ -71,12 +71,14 @@ def main(args):
     model = Network(args)
     model = model.to(args.device)
     
-    # Model Initialization
-    for p in model.parameters():
+    # Model Initialization (layer-type aware)
+    for name, p in model.named_parameters():
+        if 'norm' in name.lower():
+            continue  # LayerNorm: keep PyTorch defaults (weight=1, bias=0)
         if p.dim() > 1:
-            nn.init.kaiming_normal_(p, mode='fan_in', nonlinearity='relu')
+            nn.init.xavier_uniform_(p)
         else:
-            nn.init.uniform_(p)
+            nn.init.zeros_(p)
 
     args.logger.info(f"memory_usage: {get_memory_usage('cuda')}")
 
