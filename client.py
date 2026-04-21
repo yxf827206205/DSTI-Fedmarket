@@ -255,6 +255,12 @@ if __name__ == "__main__":
         # DSTI 参数
         parser.add_argument('--compression_rate', default=0.01, type=float, help='DSTI sparse compression rate')
 
+        # wandb 参数
+        parser.add_argument('--use_wandb', default=False, action='store_true', help='Enable wandb logging')
+        parser.add_argument('--wandb_project', default='STCIM-Fed', type=str, help='wandb project name')
+        parser.add_argument('--wandb_run_name', default=None, type=str, help='wandb run name (auto-generated if None)')
+        parser.add_argument('--wandb_entity', default=None, type=str, help='wandb entity (username or org)')
+
         args = parser.parse_args()
 
         # Socket setup

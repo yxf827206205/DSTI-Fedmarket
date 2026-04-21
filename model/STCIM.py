@@ -125,6 +125,104 @@ class MLPModule(nn.Module):
     def fedavg(self):
         for block in self.blocks: block.fedavg()
 
+# ================= [Innovation 1] Temporal Self-Attention =================
+class TemporalSelfAttention(nn.Module):
+    """轻量级多头自注意力，作用在时间步维度上，捕获长程时序依赖"""
+    def __init__(self, d_model, n_heads=2, dropout=0.1):
+        super().__init__()
+        self.n_heads = n_heads
+        self.d_k = d_model // n_heads
+        assert d_model % n_heads == 0, f"d_model({d_model}) must be divisible by n_heads({n_heads})"
+        self.W_q = nn.Linear(d_model, d_model)
+        self.W_k = nn.Linear(d_model, d_model)
+        self.W_v = nn.Linear(d_model, d_model)
+        self.W_o = nn.Linear(d_model, d_model)
+        self.norm = nn.LayerNorm(d_model)
+        self.dropout = nn.Dropout(dropout)
+        self.scale = self.d_k ** 0.5
+
+    def forward(self, x):
+        # x: (B, T, N, D)
+        B, T, N, D = x.shape
+        residual = x
+        # reshape to (B*N, T, D) to do attention over time steps
+        x_flat = x.permute(0, 2, 1, 3).reshape(B * N, T, D)
+        Q = self.W_q(x_flat).view(B * N, T, self.n_heads, self.d_k).transpose(1, 2)
+        K = self.W_k(x_flat).view(B * N, T, self.n_heads, self.d_k).transpose(1, 2)
+        V = self.W_v(x_flat).view(B * N, T, self.n_heads, self.d_k).transpose(1, 2)
+        attn = torch.matmul(Q, K.transpose(-2, -1)) / self.scale
+        attn = F.softmax(attn, dim=-1)
+        attn = self.dropout(attn)
+        out = torch.matmul(attn, V)  # (B*N, heads, T, d_k)
+        out = out.transpose(1, 2).reshape(B * N, T, D)
+        out = self.W_o(out)
+        out = out.reshape(B, N, T, D).permute(0, 2, 1, 3)  # (B, T, N, D)
+        out = self.norm(out + residual)
+        return out
+
+# ================= [Innovation 2] Cross-Attention Fusion =================
+class CrossAttentionFusion(nn.Module):
+    """时空交叉注意力融合：让空间特征查询时间特征，产生更紧密的时空耦合表示"""
+    def __init__(self, d_spa, d_tem, d_out, n_heads=2, dropout=0.1):
+        super().__init__()
+        self.d_out = d_out
+        self.n_heads = n_heads
+        self.d_k = d_out // n_heads
+        assert d_out % n_heads == 0
+        # project both to the same dimension
+        self.proj_spa = nn.Linear(d_spa, d_out)
+        self.proj_tem = nn.Linear(d_tem, d_out)
+        self.W_q = nn.Linear(d_out, d_out)
+        self.W_k = nn.Linear(d_out, d_out)
+        self.W_v = nn.Linear(d_out, d_out)
+        self.W_o = nn.Linear(d_out, d_out)
+        self.norm = nn.LayerNorm(d_out)
+        self.dropout = nn.Dropout(dropout)
+        self.scale = self.d_k ** 0.5
+
+    def forward(self, spa_emb, tem_emb):
+        # spa_emb: (B, T, N, d_spa), tem_emb: (B, T, N, d_tem)
+        B, T, N, _ = spa_emb.shape
+        spa = self.proj_spa(spa_emb)  # (B, T, N, d_out)
+        tem = self.proj_tem(tem_emb)  # (B, T, N, d_out)
+        # cross-attention: spa queries tem
+        x_flat_q = spa.reshape(B * T, N, self.d_out)
+        x_flat_kv = tem.reshape(B * T, N, self.d_out)
+        Q = self.W_q(x_flat_q).view(B * T, N, self.n_heads, self.d_k).transpose(1, 2)
+        K = self.W_k(x_flat_kv).view(B * T, N, self.n_heads, self.d_k).transpose(1, 2)
+        V = self.W_v(x_flat_kv).view(B * T, N, self.n_heads, self.d_k).transpose(1, 2)
+        attn = torch.matmul(Q, K.transpose(-2, -1)) / self.scale
+        attn = F.softmax(attn, dim=-1)
+        attn = self.dropout(attn)
+        out = torch.matmul(attn, V)
+        out = out.transpose(1, 2).reshape(B * T, N, self.d_out)
+        out = self.W_o(out).reshape(B, T, N, self.d_out)
+        # residual with projected spatial
+        out = self.norm(out + spa)
+        return out
+
+# ================= [Innovation 3] Adaptive Feature Gate =================
+class AdaptiveFeatureGate(nn.Module):
+    """自适应门控：动态平衡多路特征流的贡献（类似 SE-Net 的 squeeze-excite 思想）"""
+    def __init__(self, n_streams, d_feature, reduction=4):
+        super().__init__()
+        self.n_streams = n_streams
+        d_squeeze = max(d_feature // reduction, 4)
+        self.squeeze = nn.Sequential(
+            nn.Linear(d_feature * n_streams, d_squeeze),
+            nn.ReLU(inplace=True),
+            nn.Linear(d_squeeze, n_streams),
+        )
+
+    def forward(self, *features):
+        # features: tuple of (B, T, N, D) tensors, all with same D
+        stacked = torch.stack(features, dim=-1)  # (B, T, N, D, n_streams)
+        concat = torch.cat(features, dim=-1)      # (B, T, N, D*n_streams)
+        gates = self.squeeze(concat)               # (B, T, N, n_streams)
+        gates = F.softmax(gates, dim=-1).unsqueeze(-2)  # (B, T, N, 1, n_streams)
+        out = (stacked * gates).sum(dim=-1)        # (B, T, N, D)
+        return out
+
 # ----------------- 辅助类 (gtnet 等保持不变) -----------------
 class gtnet(nn.Module):
     def __init__(self, gcn_true, buildA_true, gcn_depth, num_nodes, device, predefined_A=None, static_feat=None, dropout=0.3, subgraph_size=20, node_dim=40, dilation_exponential=1, conv_channels=32, residual_channels=32, skip_channels=64, end_channels=128, seq_length=12, in_dim=2, out_dim=12, layers=3, propalpha=0.05, tanhalpha=3, layer_norm_affline=True):
@@ -246,12 +344,31 @@ class STCIMwithGCN(nn.Module):
         self.MLPA = MLPModule(args, self.tod_embedding_dim + self.dow_embedding_dim, 1, dropout=0.1, name="MLPA")
         self.MLPB = MLPModule(args, self.dsp + self.dsu, 1, dropout=0.1, name="MLPB")
         self.MLPC = MLPModule(args, 64, 1, dropout=0.1, name="MLPC")
-        self.MLPD = MLPModule(args,  self.tod_embedding_dim + self.dow_embedding_dim+self.dsp + self.dsu, 1, dropout=0.1, name="MLPD")
-        self.MLPE = MLPModule(args,  self.tod_embedding_dim + self.dow_embedding_dim+self.dsp + self.dsu + 64, 3, dropout=0.1, name="MLPE")
+
+        # [Innovation 1] Temporal Self-Attention on temporal embedding
+        d_tem = self.tod_embedding_dim + self.dow_embedding_dim
+        d_spa = self.dsp + self.dsu
+        # Cross-attention output dimension
+        self.d_cross = d_tem + d_spa  # keep same total dim for compatibility
+        
+        self.temporal_sa = TemporalSelfAttention(d_tem, n_heads=2, dropout=0.1)
+
+        # [Innovation 2] Cross-Attention Fusion replaces simple concat for ST embedding
+        self.cross_attn_fusion = CrossAttentionFusion(d_spa, d_tem, self.d_cross, n_heads=2, dropout=0.1)
+
+        self.MLPD = MLPModule(args, self.d_cross, 1, dropout=0.1, name="MLPD")
+
+        # [Innovation 3] Adaptive Feature Gate fuses (st_emb, data_emb, gcn_out)
+        # All streams projected to a common dimension
+        self.d_fuse = self.d_cross  # common dimension for gating
+        self.data_proj_gate = nn.Linear(64, self.d_fuse)
+        self.feature_gate = AdaptiveFeatureGate(n_streams=2, d_feature=self.d_fuse, reduction=4)
+
+        self.MLPE = MLPModule(args, self.d_fuse, 3, dropout=0.1, name="MLPE")
         self.MLPF = MLPModule(args, self.in_steps, 2, dropout=0, name="MLPF")
         
         self.steps_linear = nn.Linear(self.in_steps, self.out_steps)
-        self.out_linear = nn.Linear(self.tod_embedding_dim + self.dow_embedding_dim+self.dsp + self.dsu + 64, 1)
+        self.out_linear = nn.Linear(self.d_fuse, 1)
 
         self.data_l = nn.Parameter(torch.randn(64))
         self.tod_embedding_l = nn.Parameter(torch.randn(self.tod_embedding_dim))
@@ -291,17 +408,26 @@ class STCIMwithGCN(nn.Module):
         spa_n_emb, spa_u_emb= self.SpatialEmbedding(node_indices)
         tem_emb = torch.cat((tod_emb, dow_emb), dim=-1)
         tem_emb = self.MLPA(tem_emb)
+        
+        # [Innovation 1] Temporal Self-Attention
+        tem_emb = self.temporal_sa(tem_emb)  # (B, T, N, d_tem)
+        
         spa_emb = torch.cat((spa_n_emb, spa_u_emb), dim=-1)
-
         spa_emb = spa_emb.unsqueeze(1)  
         spa_emb = spa_emb.repeat(1, self.in_steps, 1, 1)  
         spa_emb = self.MLPB(spa_emb)
-        st_emb = torch.cat((spa_emb, tem_emb), dim=-1)
+        
+        # [Innovation 2] Cross-Attention Fusion (replaces simple concat)
+        st_emb = self.cross_attn_fusion(spa_emb, tem_emb)  # (B, T, N, d_cross)
         st_emb = self.MLPD(st_emb)
+        
         x = self.data_embedding(x)
         x = self.MLPC(x)
 
-        step = torch.cat((st_emb, x), dim=-1)
+        # [Innovation 3] Adaptive Feature Gate
+        x_proj = self.data_proj_gate(x)  # project data to same dim as st_emb
+        step = self.feature_gate(st_emb, x_proj)  # (B, T, N, d_fuse)
+        
         step = self.MLPE(step)
         step = step.permute(0, 3, 2, 1)
         step = self.MLPF(step)
@@ -328,6 +454,16 @@ class STCIMwithGCN(nn.Module):
         self.data_embedding.load_state_dict(model_dict)
         model_dict = self.comm_socket(self.steps_linear.state_dict())
         self.steps_linear.load_state_dict(model_dict)
+        
+        # [Innovation] 新增模块的联邦聚合
+        model_dict = self.comm_socket(self.temporal_sa.state_dict())
+        self.temporal_sa.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.cross_attn_fusion.state_dict())
+        self.cross_attn_fusion.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.feature_gate.state_dict())
+        self.feature_gate.load_state_dict(model_dict)
+        model_dict = self.comm_socket(self.data_proj_gate.state_dict())
+        self.data_proj_gate.load_state_dict(model_dict)
         
         logits_to_send = None
         if hasattr(self, 'current_logits'):

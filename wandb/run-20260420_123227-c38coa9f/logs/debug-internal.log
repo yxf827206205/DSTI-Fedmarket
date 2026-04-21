@@ -1,0 +1,17 @@
+{"time":"2026-04-20T12:32:27.775288651+08:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-20T12:32:27.777935639+08:00","level":"INFO","msg":"stream: starting","core version":"0.26.0"}
+{"time":"2026-04-20T12:32:28.977235239+08:00","level":"INFO","msg":"stream: created new stream","id":"c38coa9f"}
+{"time":"2026-04-20T12:32:28.977340515+08:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-20T12:32:28.97760344+08:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-20T12:32:28.977642877+08:00","level":"INFO","msg":"writer: started","stream_id":"c38coa9f"}
+{"time":"2026-04-20T12:32:28.977645944+08:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-20T12:32:29.392000351+08:00","level":"ERROR","msg":"api: HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-04-20T12:32:29.392279618+08:00","level":"ERROR","msg":"runupserter: failed to init run","error":"returned error 403: {\"data\":{\"upsertBucket\":null},\"errors\":[{\"message\":\"Personal entities are disabled, please log to a different team\",\"path\":[\"upsertBucket\"],\"extensions\":{\"code\":\"PERMISSION_ERROR\"}}]}"}
+{"time":"2026-04-20T12:32:29.413308471+08:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-04-20T12:32:29.413981954+08:00","level":"ERROR","msg":"sender: uploadConfigFile: runhandle: run not yet initialized"}
+{"time":"2026-04-20T12:32:29.415155934+08:00","level":"ERROR","msg":"runfiles: runhandle: run not yet initialized"}
+{"time":"2026-04-20T12:32:29.416099863+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-20T12:32:29.416134896+08:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-20T12:32:29.416219178+08:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-20T12:32:29.416232068+08:00","level":"INFO","msg":"stream: closed"}
+{"time":"2026-04-20T12:32:29.417129977+08:00","level":"ERROR","msg":"stream: runURL: runhandle: run not yet initialized"}

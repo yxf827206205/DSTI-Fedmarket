@@ -6,6 +6,12 @@ import copy
 import numpy as np
 from lib.TrainInits import MAE_torch, RMSE_torch, MAPE_torch, All_Metrics
 
+try:
+    import wandb
+    HAS_WANDB = True
+except ImportError:
+    HAS_WANDB = False
+
 
 class Trainer(object):
     def __init__(self, model, loss, optimizer, train_loader, val_loader, test_loader,
@@ -36,6 +42,22 @@ class Trainer(object):
             
         self.best_path = os.path.join(checkpoint_dir, f'{args.dataset}_{args.in_steps}_{args.out_steps}_{args.cid}.pth')
 
+        # wandb integration
+        self.use_wandb = HAS_WANDB and getattr(args, 'use_wandb', False)
+        if self.use_wandb:
+            wandb_project = getattr(args, 'wandb_project', 'STCIM-Fed')
+            wandb_run_name = getattr(args, 'wandb_run_name', f'{args.dataset}_c{args.cid}')
+            wandb_entity = getattr(args, 'wandb_entity', None)
+            wandb.init(
+                entity=wandb_entity,
+                project=wandb_project,
+                name=wandb_run_name,
+                config=vars(args),
+                reinit=True
+            )
+            if logger:
+                logger.info(f'[wandb] Initialized: project={wandb_project}, run={wandb_run_name}')
+
     def val_epoch(self, epoch, val_dataloader):
         self.model.eval()
         total_val_loss = 0
@@ -65,6 +87,16 @@ class Trainer(object):
         val_loss = total_val_loss / len(val_dataloader)
         self.logger.info('**********Val Epoch {}: Average Loss: {:.6f}'.format(epoch, val_loss))
         self.logger.info('**********Val Epoch {}: MAE: {:.6f} RMSE: {:.6f} MAPE: {:.6f}'.format(epoch, mae, rmse, mape))
+
+        if self.use_wandb:
+            wandb.log({
+                'val/loss': val_loss,
+                'val/mae': mae,
+                'val/rmse': rmse,
+                'val/mape': mape,
+                'epoch': epoch,
+            })
+
         return val_loss
 
     def train_epoch(self, epoch):
@@ -107,6 +139,16 @@ class Trainer(object):
         mape = total_mape / self.train_per_epoch
         self.logger.info('**********Train Epoch {}: Average Loss: {:.6f}'.format(epoch, train_epoch_loss))
         self.logger.info('**********Train Epoch {}: MAE: {:.6f} RMSE: {:.6f} MAPE: {:.6f}'.format(epoch, mae, rmse, mape))
+
+        if self.use_wandb:
+            wandb.log({
+                'train/loss': train_epoch_loss,
+                'train/mae': mae,
+                'train/rmse': rmse,
+                'train/mape': mape,
+                'train/lr': self.optimizer.param_groups[0]['lr'],
+                'epoch': epoch,
+            })
 
         #learning rate decay
         if self.args.lr_decay:
@@ -228,6 +270,9 @@ class Trainer(object):
         #test
         self.model.load_state_dict(best_model)
         self.test(self.model, self.args, self.test_loader, self.scaler, self.logger)
+
+        if self.use_wandb:
+            wandb.finish()
 
     def save_checkpoint(self):
         state = {

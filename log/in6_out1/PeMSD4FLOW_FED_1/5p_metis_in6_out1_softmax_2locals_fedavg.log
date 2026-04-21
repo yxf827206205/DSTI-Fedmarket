@@ -1,0 +1,1609 @@
+2026-01-24 00:31: Experiment log path in: /home/abc/code/ntk_ex/ntk/log/in6_out1
+2026-01-24 00:31: Train: (11890, 6, 61, 3), (11890, 1, 61, 3)
+2026-01-24 00:31: Val: (1698, 6, 61, 3), (1698, 1, 61, 3)
+2026-01-24 00:31: Test: (3398, 6, 61, 3), (3398, 1, 61, 3)
+2026-01-24 00:31: memory_usage: (0.8095703125, 2.0)
+2026-01-24 00:31: Applying learning rate decay.
+2026-01-24 00:31: *****************Model Parameter*****************
+2026-01-24 00:31: data_l torch.Size([64]) True
+2026-01-24 00:31: tod_embedding_l torch.Size([32]) True
+2026-01-24 00:31: dow_embedding_l torch.Size([32]) True
+2026-01-24 00:31: tod_embedding.weight torch.Size([288, 32]) True
+2026-01-24 00:31: dow_embedding.weight torch.Size([7, 32]) True
+2026-01-24 00:31: SpatialEmbedding.B_sp torch.Size([307, 32]) True
+2026-01-24 00:31: SpatialEmbedding.B_su torch.Size([307, 32]) True
+2026-01-24 00:31: data_embedding.weight torch.Size([64, 1]) True
+2026-01-24 00:31: data_embedding.bias torch.Size([64]) True
+2026-01-24 00:31: MLPA.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 00:31: MLPA.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 00:31: MLPA.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 00:31: MLPA.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 00:31: MLPB.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 00:31: MLPB.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 00:31: MLPB.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 00:31: MLPB.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 00:31: MLPC.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 00:31: MLPC.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 00:31: MLPC.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 00:31: MLPC.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 00:31: MLPD.blocks.0.linear.weight torch.Size([128, 128]) True
+2026-01-24 00:31: MLPD.blocks.0.linear.bias torch.Size([128]) True
+2026-01-24 00:31: MLPD.blocks.0.norm.weight torch.Size([128]) True
+2026-01-24 00:31: MLPD.blocks.0.norm.bias torch.Size([128]) True
+2026-01-24 00:31: MLPE.blocks.0.linear.weight torch.Size([192, 192]) True
+2026-01-24 00:31: MLPE.blocks.0.linear.bias torch.Size([192]) True
+2026-01-24 00:31: MLPE.blocks.0.norm.weight torch.Size([192]) True
+2026-01-24 00:31: MLPE.blocks.0.norm.bias torch.Size([192]) True
+2026-01-24 00:31: MLPE.blocks.1.linear.weight torch.Size([192, 192]) True
+2026-01-24 00:31: MLPE.blocks.1.linear.bias torch.Size([192]) True
+2026-01-24 00:31: MLPE.blocks.1.norm.weight torch.Size([192]) True
+2026-01-24 00:31: MLPE.blocks.1.norm.bias torch.Size([192]) True
+2026-01-24 00:31: MLPE.blocks.2.linear.weight torch.Size([192, 192]) True
+2026-01-24 00:31: MLPE.blocks.2.linear.bias torch.Size([192]) True
+2026-01-24 00:31: MLPE.blocks.2.norm.weight torch.Size([192]) True
+2026-01-24 00:31: MLPE.blocks.2.norm.bias torch.Size([192]) True
+2026-01-24 00:31: MLPF.blocks.0.linear.weight torch.Size([6, 6]) True
+2026-01-24 00:31: MLPF.blocks.0.linear.bias torch.Size([6]) True
+2026-01-24 00:31: MLPF.blocks.0.norm.weight torch.Size([6]) True
+2026-01-24 00:31: MLPF.blocks.0.norm.bias torch.Size([6]) True
+2026-01-24 00:31: MLPF.blocks.1.linear.weight torch.Size([6, 6]) True
+2026-01-24 00:31: MLPF.blocks.1.linear.bias torch.Size([6]) True
+2026-01-24 00:31: MLPF.blocks.1.norm.weight torch.Size([6]) True
+2026-01-24 00:31: MLPF.blocks.1.norm.bias torch.Size([6]) True
+2026-01-24 00:31: steps_linear.weight torch.Size([1, 6]) True
+2026-01-24 00:31: steps_linear.bias torch.Size([1]) True
+2026-01-24 00:31: out_linear.weight torch.Size([1, 192]) True
+2026-01-24 00:31: out_linear.bias torch.Size([1]) True
+2026-01-24 00:31: gcn.filter_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 00:31: gcn.filter_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.filter_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 00:31: gcn.filter_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.filter_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 00:31: gcn.filter_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.filter_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 00:31: gcn.filter_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.filter_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 00:31: gcn.filter_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.filter_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 00:31: gcn.filter_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.filter_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 00:31: gcn.filter_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.filter_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 00:31: gcn.filter_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.gate_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 00:31: gcn.gate_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.gate_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 00:31: gcn.gate_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.gate_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 00:31: gcn.gate_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.gate_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 00:31: gcn.gate_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.gate_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 00:31: gcn.gate_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.gate_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 00:31: gcn.gate_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.gate_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 00:31: gcn.gate_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.gate_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 00:31: gcn.gate_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 00:31: gcn.residual_convs.0.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 00:31: gcn.residual_convs.0.bias torch.Size([16]) True
+2026-01-24 00:31: gcn.residual_convs.1.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 00:31: gcn.residual_convs.1.bias torch.Size([16]) True
+2026-01-24 00:31: gcn.skip_convs.0.weight torch.Size([32, 16, 1, 7]) True
+2026-01-24 00:31: gcn.skip_convs.0.bias torch.Size([32]) True
+2026-01-24 00:31: gcn.skip_convs.1.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 00:31: gcn.skip_convs.1.bias torch.Size([32]) True
+2026-01-24 00:31: gcn.gconv1.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 00:31: gcn.gconv1.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 00:31: gcn.gconv1.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 00:31: gcn.gconv1.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 00:31: gcn.gconv2.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 00:31: gcn.gconv2.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 00:31: gcn.gconv2.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 00:31: gcn.gconv2.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 00:31: gcn.norm.0.weight torch.Size([16, 61, 7]) True
+2026-01-24 00:31: gcn.norm.0.bias torch.Size([16, 61, 7]) True
+2026-01-24 00:31: gcn.norm.1.weight torch.Size([16, 61, 1]) True
+2026-01-24 00:31: gcn.norm.1.bias torch.Size([16, 61, 1]) True
+2026-01-24 00:31: gcn.start_conv.weight torch.Size([16, 1, 1, 1]) True
+2026-01-24 00:31: gcn.start_conv.bias torch.Size([16]) True
+2026-01-24 00:31: gcn.gc.emb1.weight torch.Size([61, 10]) True
+2026-01-24 00:31: gcn.gc.emb2.weight torch.Size([61, 10]) True
+2026-01-24 00:31: gcn.gc.lin1.weight torch.Size([10, 10]) True
+2026-01-24 00:31: gcn.gc.lin1.bias torch.Size([10]) True
+2026-01-24 00:31: gcn.gc.lin2.weight torch.Size([10, 10]) True
+2026-01-24 00:31: gcn.gc.lin2.bias torch.Size([10]) True
+2026-01-24 00:31: gcn.end_conv_1.weight torch.Size([64, 32, 1, 1]) True
+2026-01-24 00:31: gcn.end_conv_1.bias torch.Size([64]) True
+2026-01-24 00:31: gcn.end_conv_2.weight torch.Size([1, 64, 1, 1]) True
+2026-01-24 00:31: gcn.end_conv_2.bias torch.Size([1]) True
+2026-01-24 00:31: gcn.skip0.weight torch.Size([32, 1, 1, 13]) True
+2026-01-24 00:31: gcn.skip0.bias torch.Size([32]) True
+2026-01-24 00:31: gcn.skipE.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 00:31: gcn.skipE.bias torch.Size([32]) True
+2026-01-24 00:31: Total params num: 204373
+2026-01-24 00:31: *****************Finish Parameter****************
+2026-01-24 00:31: Train Epoch 1: 0/185 Loss: 3991.744629
+2026-01-24 00:31: Train Epoch 1: 20/185 Loss: 254.244034
+2026-01-24 00:31: Train Epoch 1: 40/185 Loss: 203.220016
+2026-01-24 00:31: Train Epoch 1: 60/185 Loss: 175.126526
+2026-01-24 00:31: Train Epoch 1: 80/185 Loss: 158.481827
+2026-01-24 00:31: Train Epoch 1: 100/185 Loss: 142.980652
+2026-01-24 00:32: Train Epoch 1: 120/185 Loss: 132.324982
+2026-01-24 00:32: Train Epoch 1: 140/185 Loss: 120.677971
+2026-01-24 00:33: Train Epoch 1: 160/185 Loss: 112.927666
+2026-01-24 00:33: Train Epoch 1: 180/185 Loss: 106.836700
+2026-01-24 00:33: **********Train Epoch 1: Average Loss: 248.111983
+2026-01-24 00:33: **********Train Epoch 1: MAE: 248.111983 RMSE: 289.478419 MAPE: 0.999692
+2026-01-24 00:33: **********Val Epoch 1: Average Loss: 28.679535
+2026-01-24 00:33: **********Val Epoch 1: MAE: 28.679535 RMSE: 39.458492 MAPE: 0.294440
+2026-01-24 00:33: *********************************Current best model saved!
+2026-01-24 00:34: Train Epoch 1: 0/185 Loss: 106.974670
+2026-01-24 00:34: Train Epoch 1: 20/185 Loss: 102.943481
+2026-01-24 00:35: Train Epoch 1: 40/185 Loss: 96.174957
+2026-01-24 00:35: Train Epoch 1: 60/185 Loss: 94.916428
+2026-01-24 00:35: Train Epoch 1: 80/185 Loss: 91.603111
+2026-01-24 00:36: Train Epoch 1: 100/185 Loss: 88.107750
+2026-01-24 00:36: Train Epoch 1: 120/185 Loss: 84.641899
+2026-01-24 00:36: Train Epoch 1: 140/185 Loss: 83.398323
+2026-01-24 00:37: Train Epoch 1: 160/185 Loss: 79.568596
+2026-01-24 00:37: Train Epoch 1: 180/185 Loss: 78.195068
+2026-01-24 00:37: **********Train Epoch 1: Average Loss: 90.037836
+2026-01-24 00:37: **********Train Epoch 1: MAE: 90.037836 RMSE: 113.562125 MAPE: 0.710617
+2026-01-24 00:37: **********Val Epoch 1: Average Loss: 27.363745
+2026-01-24 00:37: **********Val Epoch 1: MAE: 27.363745 RMSE: 38.676301 MAPE: 0.236150
+2026-01-24 00:37: *********************************Current best model saved!
+2026-01-24 00:38: Train Epoch 2: 0/185 Loss: 83.715759
+2026-01-24 00:38: Train Epoch 2: 20/185 Loss: 76.741402
+2026-01-24 00:38: Train Epoch 2: 40/185 Loss: 73.644203
+2026-01-24 00:39: Train Epoch 2: 60/185 Loss: 71.089157
+2026-01-24 00:39: Train Epoch 2: 80/185 Loss: 68.948669
+2026-01-24 00:39: Train Epoch 2: 100/185 Loss: 66.868202
+2026-01-24 00:40: Train Epoch 2: 120/185 Loss: 66.181892
+2026-01-24 00:40: Train Epoch 2: 140/185 Loss: 65.809723
+2026-01-24 00:40: Train Epoch 2: 160/185 Loss: 62.872227
+2026-01-24 00:40: Train Epoch 2: 180/185 Loss: 61.449425
+2026-01-24 00:40: **********Train Epoch 2: Average Loss: 68.847006
+2026-01-24 00:40: **********Train Epoch 2: MAE: 68.847006 RMSE: 87.129834 MAPE: 0.603179
+2026-01-24 00:41: **********Val Epoch 2: Average Loss: 24.432141
+2026-01-24 00:41: **********Val Epoch 2: MAE: 24.432141 RMSE: 34.793928 MAPE: 0.218851
+2026-01-24 00:41: *********************************Current best model saved!
+2026-01-24 00:41: Train Epoch 2: 0/185 Loss: 78.146156
+2026-01-24 00:41: Train Epoch 2: 20/185 Loss: 59.356667
+2026-01-24 00:42: Train Epoch 2: 40/185 Loss: 56.467400
+2026-01-24 00:42: Train Epoch 2: 60/185 Loss: 56.826862
+2026-01-24 00:42: Train Epoch 2: 80/185 Loss: 55.741447
+2026-01-24 00:42: Train Epoch 2: 100/185 Loss: 53.977711
+2026-01-24 00:43: Train Epoch 2: 120/185 Loss: 52.916389
+2026-01-24 00:43: Train Epoch 2: 140/185 Loss: 50.845573
+2026-01-24 00:43: Train Epoch 2: 160/185 Loss: 48.986095
+2026-01-24 00:44: Train Epoch 2: 180/185 Loss: 49.214836
+2026-01-24 00:44: **********Train Epoch 2: Average Loss: 54.989639
+2026-01-24 00:44: **********Train Epoch 2: MAE: 54.989639 RMSE: 69.842847 MAPE: 0.522319
+2026-01-24 00:44: **********Val Epoch 2: Average Loss: 22.241387
+2026-01-24 00:44: **********Val Epoch 2: MAE: 22.241387 RMSE: 32.047148 MAPE: 0.226211
+2026-01-24 00:44: *********************************Current best model saved!
+2026-01-24 00:44: Train Epoch 3: 0/185 Loss: 75.615677
+2026-01-24 00:44: Train Epoch 3: 20/185 Loss: 50.728966
+2026-01-24 22:39: Experiment log path in: /home/abc/code/ntk_ex/ntk/log/in6_out1
+2026-01-24 22:39: Train: (11890, 6, 61, 3), (11890, 1, 61, 3)
+2026-01-24 22:39: Val: (1698, 6, 61, 3), (1698, 1, 61, 3)
+2026-01-24 22:39: Test: (3398, 6, 61, 3), (3398, 1, 61, 3)
+2026-01-24 22:39: memory_usage: (0.8095703125, 2.0)
+2026-01-24 22:39: Applying learning rate decay.
+2026-01-24 22:39: *****************Model Parameter*****************
+2026-01-24 22:39: data_l torch.Size([64]) True
+2026-01-24 22:39: tod_embedding_l torch.Size([32]) True
+2026-01-24 22:39: dow_embedding_l torch.Size([32]) True
+2026-01-24 22:39: tod_embedding.weight torch.Size([288, 32]) True
+2026-01-24 22:39: dow_embedding.weight torch.Size([7, 32]) True
+2026-01-24 22:39: SpatialEmbedding.B_sp torch.Size([307, 32]) True
+2026-01-24 22:39: SpatialEmbedding.B_su torch.Size([307, 32]) True
+2026-01-24 22:39: data_embedding.weight torch.Size([64, 1]) True
+2026-01-24 22:39: data_embedding.bias torch.Size([64]) True
+2026-01-24 22:39: MLPA.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:39: MLPA.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:39: MLPA.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:39: MLPA.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:39: MLPB.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:39: MLPB.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:39: MLPB.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:39: MLPB.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:39: MLPC.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:39: MLPC.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:39: MLPC.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:39: MLPC.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:39: MLPD.blocks.0.linear.weight torch.Size([128, 128]) True
+2026-01-24 22:39: MLPD.blocks.0.linear.bias torch.Size([128]) True
+2026-01-24 22:39: MLPD.blocks.0.norm.weight torch.Size([128]) True
+2026-01-24 22:39: MLPD.blocks.0.norm.bias torch.Size([128]) True
+2026-01-24 22:39: MLPE.blocks.0.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:39: MLPE.blocks.0.linear.bias torch.Size([192]) True
+2026-01-24 22:39: MLPE.blocks.0.norm.weight torch.Size([192]) True
+2026-01-24 22:39: MLPE.blocks.0.norm.bias torch.Size([192]) True
+2026-01-24 22:39: MLPE.blocks.1.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:39: MLPE.blocks.1.linear.bias torch.Size([192]) True
+2026-01-24 22:39: MLPE.blocks.1.norm.weight torch.Size([192]) True
+2026-01-24 22:39: MLPE.blocks.1.norm.bias torch.Size([192]) True
+2026-01-24 22:39: MLPE.blocks.2.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:39: MLPE.blocks.2.linear.bias torch.Size([192]) True
+2026-01-24 22:39: MLPE.blocks.2.norm.weight torch.Size([192]) True
+2026-01-24 22:39: MLPE.blocks.2.norm.bias torch.Size([192]) True
+2026-01-24 22:39: MLPF.blocks.0.linear.weight torch.Size([6, 6]) True
+2026-01-24 22:39: MLPF.blocks.0.linear.bias torch.Size([6]) True
+2026-01-24 22:39: MLPF.blocks.0.norm.weight torch.Size([6]) True
+2026-01-24 22:39: MLPF.blocks.0.norm.bias torch.Size([6]) True
+2026-01-24 22:39: MLPF.blocks.1.linear.weight torch.Size([6, 6]) True
+2026-01-24 22:39: MLPF.blocks.1.linear.bias torch.Size([6]) True
+2026-01-24 22:39: MLPF.blocks.1.norm.weight torch.Size([6]) True
+2026-01-24 22:39: MLPF.blocks.1.norm.bias torch.Size([6]) True
+2026-01-24 22:39: steps_linear.weight torch.Size([1, 6]) True
+2026-01-24 22:39: steps_linear.bias torch.Size([1]) True
+2026-01-24 22:39: out_linear.weight torch.Size([1, 192]) True
+2026-01-24 22:39: out_linear.bias torch.Size([1]) True
+2026-01-24 22:39: gcn.filter_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:39: gcn.filter_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.filter_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:39: gcn.filter_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.filter_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:39: gcn.filter_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.filter_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:39: gcn.filter_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.filter_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:39: gcn.filter_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.filter_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:39: gcn.filter_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.filter_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:39: gcn.filter_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.filter_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:39: gcn.filter_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.gate_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:39: gcn.gate_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.gate_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:39: gcn.gate_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.gate_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:39: gcn.gate_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.gate_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:39: gcn.gate_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.gate_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:39: gcn.gate_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.gate_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:39: gcn.gate_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.gate_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:39: gcn.gate_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.gate_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:39: gcn.gate_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:39: gcn.residual_convs.0.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 22:39: gcn.residual_convs.0.bias torch.Size([16]) True
+2026-01-24 22:39: gcn.residual_convs.1.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 22:39: gcn.residual_convs.1.bias torch.Size([16]) True
+2026-01-24 22:39: gcn.skip_convs.0.weight torch.Size([32, 16, 1, 7]) True
+2026-01-24 22:39: gcn.skip_convs.0.bias torch.Size([32]) True
+2026-01-24 22:39: gcn.skip_convs.1.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 22:39: gcn.skip_convs.1.bias torch.Size([32]) True
+2026-01-24 22:39: gcn.gconv1.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:39: gcn.gconv1.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:39: gcn.gconv1.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:39: gcn.gconv1.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:39: gcn.gconv2.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:39: gcn.gconv2.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:39: gcn.gconv2.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:39: gcn.gconv2.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:39: gcn.norm.0.weight torch.Size([16, 61, 7]) True
+2026-01-24 22:39: gcn.norm.0.bias torch.Size([16, 61, 7]) True
+2026-01-24 22:39: gcn.norm.1.weight torch.Size([16, 61, 1]) True
+2026-01-24 22:39: gcn.norm.1.bias torch.Size([16, 61, 1]) True
+2026-01-24 22:39: gcn.start_conv.weight torch.Size([16, 1, 1, 1]) True
+2026-01-24 22:39: gcn.start_conv.bias torch.Size([16]) True
+2026-01-24 22:39: gcn.gc.emb1.weight torch.Size([61, 10]) True
+2026-01-24 22:39: gcn.gc.emb2.weight torch.Size([61, 10]) True
+2026-01-24 22:39: gcn.gc.lin1.weight torch.Size([10, 10]) True
+2026-01-24 22:39: gcn.gc.lin1.bias torch.Size([10]) True
+2026-01-24 22:39: gcn.gc.lin2.weight torch.Size([10, 10]) True
+2026-01-24 22:39: gcn.gc.lin2.bias torch.Size([10]) True
+2026-01-24 22:39: gcn.end_conv_1.weight torch.Size([64, 32, 1, 1]) True
+2026-01-24 22:39: gcn.end_conv_1.bias torch.Size([64]) True
+2026-01-24 22:39: gcn.end_conv_2.weight torch.Size([1, 64, 1, 1]) True
+2026-01-24 22:39: gcn.end_conv_2.bias torch.Size([1]) True
+2026-01-24 22:39: gcn.skip0.weight torch.Size([32, 1, 1, 13]) True
+2026-01-24 22:39: gcn.skip0.bias torch.Size([32]) True
+2026-01-24 22:39: gcn.skipE.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 22:39: gcn.skipE.bias torch.Size([32]) True
+2026-01-24 22:39: Total params num: 204373
+2026-01-24 22:39: *****************Finish Parameter****************
+2026-01-24 22:39: Train Epoch 1: 0/185 Loss: 3991.744629
+2026-01-24 22:39: Train Epoch 1: 20/185 Loss: 254.244034
+2026-01-24 22:39: Train Epoch 1: 40/185 Loss: 203.220016
+2026-01-24 22:39: Train Epoch 1: 60/185 Loss: 175.126526
+2026-01-24 22:39: Train Epoch 1: 80/185 Loss: 158.481827
+2026-01-24 22:39: Train Epoch 1: 100/185 Loss: 142.980652
+2026-01-24 22:41: Experiment log path in: /home/abc/code/ntk_ex/ntk/log/in6_out1
+2026-01-24 22:41: Train: (11890, 6, 61, 3), (11890, 1, 61, 3)
+2026-01-24 22:41: Val: (1698, 6, 61, 3), (1698, 1, 61, 3)
+2026-01-24 22:41: Test: (3398, 6, 61, 3), (3398, 1, 61, 3)
+2026-01-24 22:41: memory_usage: (0.8095703125, 2.0)
+2026-01-24 22:41: Applying learning rate decay.
+2026-01-24 22:41: *****************Model Parameter*****************
+2026-01-24 22:41: data_l torch.Size([64]) True
+2026-01-24 22:41: tod_embedding_l torch.Size([32]) True
+2026-01-24 22:41: dow_embedding_l torch.Size([32]) True
+2026-01-24 22:41: tod_embedding.weight torch.Size([288, 32]) True
+2026-01-24 22:41: dow_embedding.weight torch.Size([7, 32]) True
+2026-01-24 22:41: SpatialEmbedding.B_sp torch.Size([307, 32]) True
+2026-01-24 22:41: SpatialEmbedding.B_su torch.Size([307, 32]) True
+2026-01-24 22:41: data_embedding.weight torch.Size([64, 1]) True
+2026-01-24 22:41: data_embedding.bias torch.Size([64]) True
+2026-01-24 22:41: MLPA.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:41: MLPA.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:41: MLPA.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:41: MLPA.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:41: MLPB.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:41: MLPB.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:41: MLPB.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:41: MLPB.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:41: MLPC.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:41: MLPC.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:41: MLPC.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:41: MLPC.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:41: MLPD.blocks.0.linear.weight torch.Size([128, 128]) True
+2026-01-24 22:41: MLPD.blocks.0.linear.bias torch.Size([128]) True
+2026-01-24 22:41: MLPD.blocks.0.norm.weight torch.Size([128]) True
+2026-01-24 22:41: MLPD.blocks.0.norm.bias torch.Size([128]) True
+2026-01-24 22:41: MLPE.blocks.0.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:41: MLPE.blocks.0.linear.bias torch.Size([192]) True
+2026-01-24 22:41: MLPE.blocks.0.norm.weight torch.Size([192]) True
+2026-01-24 22:41: MLPE.blocks.0.norm.bias torch.Size([192]) True
+2026-01-24 22:41: MLPE.blocks.1.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:41: MLPE.blocks.1.linear.bias torch.Size([192]) True
+2026-01-24 22:41: MLPE.blocks.1.norm.weight torch.Size([192]) True
+2026-01-24 22:41: MLPE.blocks.1.norm.bias torch.Size([192]) True
+2026-01-24 22:41: MLPE.blocks.2.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:41: MLPE.blocks.2.linear.bias torch.Size([192]) True
+2026-01-24 22:41: MLPE.blocks.2.norm.weight torch.Size([192]) True
+2026-01-24 22:41: MLPE.blocks.2.norm.bias torch.Size([192]) True
+2026-01-24 22:41: MLPF.blocks.0.linear.weight torch.Size([6, 6]) True
+2026-01-24 22:41: MLPF.blocks.0.linear.bias torch.Size([6]) True
+2026-01-24 22:41: MLPF.blocks.0.norm.weight torch.Size([6]) True
+2026-01-24 22:41: MLPF.blocks.0.norm.bias torch.Size([6]) True
+2026-01-24 22:41: MLPF.blocks.1.linear.weight torch.Size([6, 6]) True
+2026-01-24 22:41: MLPF.blocks.1.linear.bias torch.Size([6]) True
+2026-01-24 22:41: MLPF.blocks.1.norm.weight torch.Size([6]) True
+2026-01-24 22:41: MLPF.blocks.1.norm.bias torch.Size([6]) True
+2026-01-24 22:41: steps_linear.weight torch.Size([1, 6]) True
+2026-01-24 22:41: steps_linear.bias torch.Size([1]) True
+2026-01-24 22:41: out_linear.weight torch.Size([1, 192]) True
+2026-01-24 22:41: out_linear.bias torch.Size([1]) True
+2026-01-24 22:41: gcn.filter_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:41: gcn.filter_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.filter_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:41: gcn.filter_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.filter_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:41: gcn.filter_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.filter_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:41: gcn.filter_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.filter_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:41: gcn.filter_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.filter_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:41: gcn.filter_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.filter_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:41: gcn.filter_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.filter_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:41: gcn.filter_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.gate_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:41: gcn.gate_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.gate_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:41: gcn.gate_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.gate_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:41: gcn.gate_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.gate_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:41: gcn.gate_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.gate_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:41: gcn.gate_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.gate_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:41: gcn.gate_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.gate_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:41: gcn.gate_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.gate_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:41: gcn.gate_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:41: gcn.residual_convs.0.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 22:41: gcn.residual_convs.0.bias torch.Size([16]) True
+2026-01-24 22:41: gcn.residual_convs.1.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 22:41: gcn.residual_convs.1.bias torch.Size([16]) True
+2026-01-24 22:41: gcn.skip_convs.0.weight torch.Size([32, 16, 1, 7]) True
+2026-01-24 22:41: gcn.skip_convs.0.bias torch.Size([32]) True
+2026-01-24 22:41: gcn.skip_convs.1.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 22:41: gcn.skip_convs.1.bias torch.Size([32]) True
+2026-01-24 22:41: gcn.gconv1.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:41: gcn.gconv1.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:41: gcn.gconv1.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:41: gcn.gconv1.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:41: gcn.gconv2.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:41: gcn.gconv2.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:41: gcn.gconv2.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:41: gcn.gconv2.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:41: gcn.norm.0.weight torch.Size([16, 61, 7]) True
+2026-01-24 22:41: gcn.norm.0.bias torch.Size([16, 61, 7]) True
+2026-01-24 22:41: gcn.norm.1.weight torch.Size([16, 61, 1]) True
+2026-01-24 22:41: gcn.norm.1.bias torch.Size([16, 61, 1]) True
+2026-01-24 22:41: gcn.start_conv.weight torch.Size([16, 1, 1, 1]) True
+2026-01-24 22:41: gcn.start_conv.bias torch.Size([16]) True
+2026-01-24 22:41: gcn.gc.emb1.weight torch.Size([61, 10]) True
+2026-01-24 22:41: gcn.gc.emb2.weight torch.Size([61, 10]) True
+2026-01-24 22:41: gcn.gc.lin1.weight torch.Size([10, 10]) True
+2026-01-24 22:41: gcn.gc.lin1.bias torch.Size([10]) True
+2026-01-24 22:41: gcn.gc.lin2.weight torch.Size([10, 10]) True
+2026-01-24 22:41: gcn.gc.lin2.bias torch.Size([10]) True
+2026-01-24 22:41: gcn.end_conv_1.weight torch.Size([64, 32, 1, 1]) True
+2026-01-24 22:41: gcn.end_conv_1.bias torch.Size([64]) True
+2026-01-24 22:41: gcn.end_conv_2.weight torch.Size([1, 64, 1, 1]) True
+2026-01-24 22:41: gcn.end_conv_2.bias torch.Size([1]) True
+2026-01-24 22:41: gcn.skip0.weight torch.Size([32, 1, 1, 13]) True
+2026-01-24 22:41: gcn.skip0.bias torch.Size([32]) True
+2026-01-24 22:41: gcn.skipE.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 22:41: gcn.skipE.bias torch.Size([32]) True
+2026-01-24 22:41: Total params num: 204373
+2026-01-24 22:41: *****************Finish Parameter****************
+2026-01-24 22:41: Train Epoch 1: 0/185 Loss: 3991.744629
+2026-01-24 22:41: Train Epoch 1: 20/185 Loss: 254.244034
+2026-01-24 22:41: Train Epoch 1: 40/185 Loss: 203.220016
+2026-01-24 22:41: Train Epoch 1: 60/185 Loss: 175.126526
+2026-01-24 22:41: Train Epoch 1: 80/185 Loss: 158.481827
+2026-01-24 22:42: Train Epoch 1: 100/185 Loss: 142.980652
+2026-01-24 22:42: Train Epoch 1: 120/185 Loss: 132.324982
+2026-01-24 22:42: Train Epoch 1: 140/185 Loss: 120.677971
+2026-01-24 22:56: Experiment log path in: /root/autodl-tmp/ntk_project/ntk/log/in6_out1
+2026-01-24 22:56: Train: (11890, 6, 61, 3), (11890, 1, 61, 3)
+2026-01-24 22:56: Val: (1698, 6, 61, 3), (1698, 1, 61, 3)
+2026-01-24 22:56: Test: (3398, 6, 61, 3), (3398, 1, 61, 3)
+2026-01-24 22:56: memory_usage: (0.8095703125, 2.0)
+2026-01-24 22:56: Applying learning rate decay.
+2026-01-24 22:56: *****************Model Parameter*****************
+2026-01-24 22:56: data_l torch.Size([64]) True
+2026-01-24 22:56: tod_embedding_l torch.Size([32]) True
+2026-01-24 22:56: dow_embedding_l torch.Size([32]) True
+2026-01-24 22:56: tod_embedding.weight torch.Size([288, 32]) True
+2026-01-24 22:56: dow_embedding.weight torch.Size([7, 32]) True
+2026-01-24 22:56: SpatialEmbedding.B_sp torch.Size([307, 32]) True
+2026-01-24 22:56: SpatialEmbedding.B_su torch.Size([307, 32]) True
+2026-01-24 22:56: data_embedding.weight torch.Size([64, 1]) True
+2026-01-24 22:56: data_embedding.bias torch.Size([64]) True
+2026-01-24 22:56: MLPA.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:56: MLPA.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:56: MLPA.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:56: MLPA.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:56: MLPB.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:56: MLPB.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:56: MLPB.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:56: MLPB.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:56: MLPC.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 22:56: MLPC.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 22:56: MLPC.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 22:56: MLPC.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 22:56: MLPD.blocks.0.linear.weight torch.Size([128, 128]) True
+2026-01-24 22:56: MLPD.blocks.0.linear.bias torch.Size([128]) True
+2026-01-24 22:56: MLPD.blocks.0.norm.weight torch.Size([128]) True
+2026-01-24 22:56: MLPD.blocks.0.norm.bias torch.Size([128]) True
+2026-01-24 22:56: MLPE.blocks.0.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:56: MLPE.blocks.0.linear.bias torch.Size([192]) True
+2026-01-24 22:56: MLPE.blocks.0.norm.weight torch.Size([192]) True
+2026-01-24 22:56: MLPE.blocks.0.norm.bias torch.Size([192]) True
+2026-01-24 22:56: MLPE.blocks.1.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:56: MLPE.blocks.1.linear.bias torch.Size([192]) True
+2026-01-24 22:56: MLPE.blocks.1.norm.weight torch.Size([192]) True
+2026-01-24 22:56: MLPE.blocks.1.norm.bias torch.Size([192]) True
+2026-01-24 22:56: MLPE.blocks.2.linear.weight torch.Size([192, 192]) True
+2026-01-24 22:56: MLPE.blocks.2.linear.bias torch.Size([192]) True
+2026-01-24 22:56: MLPE.blocks.2.norm.weight torch.Size([192]) True
+2026-01-24 22:56: MLPE.blocks.2.norm.bias torch.Size([192]) True
+2026-01-24 22:56: MLPF.blocks.0.linear.weight torch.Size([6, 6]) True
+2026-01-24 22:56: MLPF.blocks.0.linear.bias torch.Size([6]) True
+2026-01-24 22:56: MLPF.blocks.0.norm.weight torch.Size([6]) True
+2026-01-24 22:56: MLPF.blocks.0.norm.bias torch.Size([6]) True
+2026-01-24 22:56: MLPF.blocks.1.linear.weight torch.Size([6, 6]) True
+2026-01-24 22:56: MLPF.blocks.1.linear.bias torch.Size([6]) True
+2026-01-24 22:56: MLPF.blocks.1.norm.weight torch.Size([6]) True
+2026-01-24 22:56: MLPF.blocks.1.norm.bias torch.Size([6]) True
+2026-01-24 22:56: steps_linear.weight torch.Size([1, 6]) True
+2026-01-24 22:56: steps_linear.bias torch.Size([1]) True
+2026-01-24 22:56: out_linear.weight torch.Size([1, 192]) True
+2026-01-24 22:56: out_linear.bias torch.Size([1]) True
+2026-01-24 22:56: gcn.filter_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:56: gcn.filter_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.filter_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:56: gcn.filter_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.filter_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:56: gcn.filter_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.filter_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:56: gcn.filter_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.filter_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:56: gcn.filter_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.filter_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:56: gcn.filter_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.filter_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:56: gcn.filter_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.filter_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:56: gcn.filter_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.gate_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:56: gcn.gate_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.gate_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:56: gcn.gate_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.gate_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:56: gcn.gate_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.gate_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:56: gcn.gate_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.gate_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 22:56: gcn.gate_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.gate_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 22:56: gcn.gate_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.gate_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 22:56: gcn.gate_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.gate_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 22:56: gcn.gate_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 22:56: gcn.residual_convs.0.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 22:56: gcn.residual_convs.0.bias torch.Size([16]) True
+2026-01-24 22:56: gcn.residual_convs.1.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 22:56: gcn.residual_convs.1.bias torch.Size([16]) True
+2026-01-24 22:56: gcn.skip_convs.0.weight torch.Size([32, 16, 1, 7]) True
+2026-01-24 22:56: gcn.skip_convs.0.bias torch.Size([32]) True
+2026-01-24 22:56: gcn.skip_convs.1.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 22:56: gcn.skip_convs.1.bias torch.Size([32]) True
+2026-01-24 22:56: gcn.gconv1.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:56: gcn.gconv1.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:56: gcn.gconv1.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:56: gcn.gconv1.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:56: gcn.gconv2.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:56: gcn.gconv2.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:56: gcn.gconv2.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 22:56: gcn.gconv2.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 22:56: gcn.norm.0.weight torch.Size([16, 61, 7]) True
+2026-01-24 22:56: gcn.norm.0.bias torch.Size([16, 61, 7]) True
+2026-01-24 22:56: gcn.norm.1.weight torch.Size([16, 61, 1]) True
+2026-01-24 22:56: gcn.norm.1.bias torch.Size([16, 61, 1]) True
+2026-01-24 22:56: gcn.start_conv.weight torch.Size([16, 1, 1, 1]) True
+2026-01-24 22:56: gcn.start_conv.bias torch.Size([16]) True
+2026-01-24 22:56: gcn.gc.emb1.weight torch.Size([61, 10]) True
+2026-01-24 22:56: gcn.gc.emb2.weight torch.Size([61, 10]) True
+2026-01-24 22:56: gcn.gc.lin1.weight torch.Size([10, 10]) True
+2026-01-24 22:56: gcn.gc.lin1.bias torch.Size([10]) True
+2026-01-24 22:56: gcn.gc.lin2.weight torch.Size([10, 10]) True
+2026-01-24 22:56: gcn.gc.lin2.bias torch.Size([10]) True
+2026-01-24 22:56: gcn.end_conv_1.weight torch.Size([64, 32, 1, 1]) True
+2026-01-24 22:56: gcn.end_conv_1.bias torch.Size([64]) True
+2026-01-24 22:56: gcn.end_conv_2.weight torch.Size([1, 64, 1, 1]) True
+2026-01-24 22:56: gcn.end_conv_2.bias torch.Size([1]) True
+2026-01-24 22:56: gcn.skip0.weight torch.Size([32, 1, 1, 13]) True
+2026-01-24 22:56: gcn.skip0.bias torch.Size([32]) True
+2026-01-24 22:56: gcn.skipE.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 22:56: gcn.skipE.bias torch.Size([32]) True
+2026-01-24 22:56: Total params num: 204373
+2026-01-24 22:56: *****************Finish Parameter****************
+2026-01-24 22:56: Train Epoch 1: 0/185 Loss: 3998.605957
+2026-01-24 22:56: Train Epoch 1: 20/185 Loss: 257.294800
+2026-01-24 22:56: Train Epoch 1: 40/185 Loss: 210.580292
+2026-01-24 22:56: Train Epoch 1: 60/185 Loss: 176.553299
+2026-01-24 22:57: Train Epoch 1: 80/185 Loss: 159.390289
+2026-01-24 22:57: Train Epoch 1: 100/185 Loss: 146.326126
+2026-01-24 22:57: Train Epoch 1: 120/185 Loss: 134.017044
+2026-01-24 22:57: Train Epoch 1: 140/185 Loss: 119.903252
+2026-01-24 22:57: Train Epoch 1: 160/185 Loss: 113.336365
+2026-01-24 22:57: Train Epoch 1: 180/185 Loss: 104.281563
+2026-01-24 22:57: **********Train Epoch 1: Average Loss: 249.341938
+2026-01-24 22:57: **********Train Epoch 1: MAE: 249.341938 RMSE: 290.929521 MAPE: 1.002248
+2026-01-24 22:57: **********Val Epoch 1: Average Loss: 32.416205
+2026-01-24 22:57: **********Val Epoch 1: MAE: 32.416205 RMSE: 43.708762 MAPE: 0.286771
+2026-01-24 22:57: *********************************Current best model saved!
+2026-01-24 22:57: Train Epoch 1: 0/185 Loss: 105.743172
+2026-01-24 22:57: Train Epoch 1: 20/185 Loss: 100.605194
+2026-01-24 22:57: Train Epoch 1: 40/185 Loss: 95.843040
+2026-01-24 22:57: Train Epoch 1: 60/185 Loss: 92.956879
+2026-01-24 22:57: Train Epoch 1: 80/185 Loss: 92.144905
+2026-01-24 22:57: Train Epoch 1: 100/185 Loss: 89.510841
+2026-01-24 22:57: Train Epoch 1: 120/185 Loss: 87.681541
+2026-01-24 22:57: Train Epoch 1: 140/185 Loss: 83.301224
+2026-01-24 22:57: Train Epoch 1: 160/185 Loss: 79.254997
+2026-01-24 22:57: Train Epoch 1: 180/185 Loss: 79.207283
+2026-01-24 22:57: **********Train Epoch 1: Average Loss: 90.314202
+2026-01-24 22:57: **********Train Epoch 1: MAE: 90.314202 RMSE: 113.907671 MAPE: 0.711065
+2026-01-24 22:57: **********Val Epoch 1: Average Loss: 29.161510
+2026-01-24 22:57: **********Val Epoch 1: MAE: 29.161510 RMSE: 39.562078 MAPE: 0.261071
+2026-01-24 22:57: *********************************Current best model saved!
+2026-01-24 22:58: Train Epoch 2: 0/185 Loss: 84.884697
+2026-01-24 22:58: Train Epoch 2: 20/185 Loss: 76.050812
+2026-01-24 22:58: Train Epoch 2: 40/185 Loss: 74.251503
+2026-01-24 22:58: Train Epoch 2: 60/185 Loss: 71.633720
+2026-01-24 22:58: Train Epoch 2: 80/185 Loss: 69.095642
+2026-01-24 22:58: Train Epoch 2: 100/185 Loss: 68.018562
+2026-01-24 22:58: Train Epoch 2: 120/185 Loss: 64.913246
+2026-01-24 22:58: Train Epoch 2: 140/185 Loss: 64.041641
+2026-01-24 22:58: Train Epoch 2: 160/185 Loss: 62.347694
+2026-01-24 22:58: Train Epoch 2: 180/185 Loss: 60.773441
+2026-01-24 22:58: **********Train Epoch 2: Average Loss: 69.229179
+2026-01-24 22:58: **********Train Epoch 2: MAE: 69.229179 RMSE: 87.579300 MAPE: 0.606084
+2026-01-24 22:58: **********Val Epoch 2: Average Loss: 23.397329
+2026-01-24 22:58: **********Val Epoch 2: MAE: 23.397329 RMSE: 32.781703 MAPE: 0.218934
+2026-01-24 22:58: *********************************Current best model saved!
+2026-01-24 22:58: Train Epoch 2: 0/185 Loss: 81.018059
+2026-01-24 22:58: Train Epoch 2: 20/185 Loss: 60.798874
+2026-01-24 22:58: Train Epoch 2: 40/185 Loss: 58.086933
+2026-01-24 22:58: Train Epoch 2: 60/185 Loss: 55.905045
+2026-01-24 22:58: Train Epoch 2: 80/185 Loss: 55.443356
+2026-01-24 22:58: Train Epoch 2: 100/185 Loss: 54.392101
+2026-01-24 22:58: Train Epoch 2: 120/185 Loss: 51.928619
+2026-01-24 22:59: Train Epoch 2: 140/185 Loss: 50.928997
+2026-01-24 22:59: Train Epoch 2: 160/185 Loss: 49.846916
+2026-01-24 22:59: Train Epoch 2: 180/185 Loss: 50.327618
+2026-01-24 22:59: **********Train Epoch 2: Average Loss: 55.194908
+2026-01-24 22:59: **********Train Epoch 2: MAE: 55.194908 RMSE: 70.132086 MAPE: 0.523715
+2026-01-24 22:59: **********Val Epoch 2: Average Loss: 22.963260
+2026-01-24 22:59: **********Val Epoch 2: MAE: 22.963260 RMSE: 31.319835 MAPE: 0.226684
+2026-01-24 22:59: *********************************Current best model saved!
+2026-01-24 22:59: Train Epoch 3: 0/185 Loss: 86.482689
+2026-01-24 22:59: Train Epoch 3: 20/185 Loss: 51.626671
+2026-01-24 22:59: Train Epoch 3: 40/185 Loss: 47.032169
+2026-01-24 22:59: Train Epoch 3: 60/185 Loss: 47.881031
+2026-01-24 22:59: Train Epoch 3: 80/185 Loss: 45.750027
+2026-01-24 22:59: Train Epoch 3: 100/185 Loss: 44.534008
+2026-01-24 22:59: Train Epoch 3: 120/185 Loss: 44.108604
+2026-01-24 22:59: Train Epoch 3: 140/185 Loss: 42.806629
+2026-01-24 22:59: Train Epoch 3: 160/185 Loss: 43.385845
+2026-01-24 22:59: Train Epoch 3: 180/185 Loss: 42.663284
+2026-01-24 22:59: **********Train Epoch 3: Average Loss: 46.380828
+2026-01-24 22:59: **********Train Epoch 3: MAE: 46.380828 RMSE: 59.130223 MAPE: 0.464562
+2026-01-24 22:59: **********Val Epoch 3: Average Loss: 19.089669
+2026-01-24 22:59: **********Val Epoch 3: MAE: 19.089669 RMSE: 28.254252 MAPE: 0.178207
+2026-01-24 22:59: *********************************Current best model saved!
+2026-01-24 22:59: Train Epoch 3: 0/185 Loss: 68.342888
+2026-01-24 22:59: Train Epoch 3: 20/185 Loss: 41.538185
+2026-01-24 23:00: Train Epoch 3: 40/185 Loss: 40.902222
+2026-01-24 23:00: Train Epoch 3: 60/185 Loss: 38.451103
+2026-01-24 23:00: Train Epoch 3: 80/185 Loss: 41.212147
+2026-01-24 23:00: Train Epoch 3: 100/185 Loss: 38.948673
+2026-01-24 23:00: Train Epoch 3: 120/185 Loss: 38.309967
+2026-01-24 23:00: Train Epoch 3: 140/185 Loss: 37.273735
+2026-01-24 23:00: Train Epoch 3: 160/185 Loss: 36.770699
+2026-01-24 23:00: Train Epoch 3: 180/185 Loss: 36.768341
+2026-01-24 23:00: **********Train Epoch 3: Average Loss: 39.379052
+2026-01-24 23:00: **********Train Epoch 3: MAE: 39.379052 RMSE: 50.629071 MAPE: 0.413313
+2026-01-24 23:00: **********Val Epoch 3: Average Loss: 18.828421
+2026-01-24 23:00: **********Val Epoch 3: MAE: 18.828421 RMSE: 28.170445 MAPE: 0.169741
+2026-01-24 23:00: *********************************Current best model saved!
+2026-01-24 23:00: Train Epoch 4: 0/185 Loss: 65.355087
+2026-01-24 23:00: Train Epoch 4: 20/185 Loss: 39.096382
+2026-01-24 23:00: Train Epoch 4: 40/185 Loss: 34.815132
+2026-01-24 23:00: Train Epoch 4: 60/185 Loss: 36.183216
+2026-01-24 23:00: Train Epoch 4: 80/185 Loss: 35.169422
+2026-01-24 23:00: Train Epoch 4: 100/185 Loss: 34.808338
+2026-01-24 23:00: Train Epoch 4: 120/185 Loss: 33.018932
+2026-01-24 23:00: Train Epoch 4: 140/185 Loss: 34.752247
+2026-01-24 23:00: Train Epoch 4: 160/185 Loss: 32.951019
+2026-01-24 23:00: Train Epoch 4: 180/185 Loss: 32.488441
+2026-01-24 23:00: **********Train Epoch 4: Average Loss: 36.028997
+2026-01-24 23:00: **********Train Epoch 4: MAE: 36.028997 RMSE: 46.472395 MAPE: 0.387054
+2026-01-24 23:00: **********Val Epoch 4: Average Loss: 17.983088
+2026-01-24 23:00: **********Val Epoch 4: MAE: 17.983088 RMSE: 27.080337 MAPE: 0.164208
+2026-01-24 23:00: *********************************Current best model saved!
+2026-01-24 23:01: Train Epoch 4: 0/185 Loss: 58.674850
+2026-01-24 23:01: Train Epoch 4: 20/185 Loss: 33.002563
+2026-01-24 23:01: Train Epoch 4: 40/185 Loss: 34.217918
+2026-01-24 23:01: Train Epoch 4: 60/185 Loss: 31.339857
+2026-01-24 23:01: Train Epoch 4: 80/185 Loss: 31.367933
+2026-01-24 23:01: Train Epoch 4: 100/185 Loss: 31.010784
+2026-01-24 23:01: Train Epoch 4: 120/185 Loss: 31.383272
+2026-01-24 23:01: Train Epoch 4: 140/185 Loss: 31.159527
+2026-01-24 23:01: Train Epoch 4: 160/185 Loss: 33.397728
+2026-01-24 23:01: Train Epoch 4: 180/185 Loss: 31.352478
+2026-01-24 23:01: **********Train Epoch 4: Average Loss: 33.258900
+2026-01-24 23:01: **********Train Epoch 4: MAE: 33.258900 RMSE: 43.104118 MAPE: 0.364619
+2026-01-24 23:01: **********Val Epoch 4: Average Loss: 19.663559
+2026-01-24 23:01: **********Val Epoch 4: MAE: 19.663559 RMSE: 28.675550 MAPE: 0.188478
+2026-01-24 23:01: Train Epoch 5: 0/185 Loss: 52.023609
+2026-01-24 23:01: Train Epoch 5: 20/185 Loss: 30.286613
+2026-01-24 23:01: Train Epoch 5: 40/185 Loss: 29.622004
+2026-01-24 23:01: Train Epoch 5: 60/185 Loss: 29.202360
+2026-01-24 23:01: Train Epoch 5: 80/185 Loss: 30.235239
+2026-01-24 23:01: Train Epoch 5: 100/185 Loss: 28.946600
+2026-01-24 23:02: Train Epoch 5: 120/185 Loss: 28.869404
+2026-01-24 23:02: Train Epoch 5: 140/185 Loss: 29.629118
+2026-01-24 23:02: Train Epoch 5: 160/185 Loss: 29.064499
+2026-01-24 23:02: Train Epoch 5: 180/185 Loss: 26.525738
+2026-01-24 23:02: **********Train Epoch 5: Average Loss: 29.896214
+2026-01-24 23:02: **********Train Epoch 5: MAE: 29.896214 RMSE: 39.285712 MAPE: 0.333026
+2026-01-24 23:02: **********Val Epoch 5: Average Loss: 17.250217
+2026-01-24 23:02: **********Val Epoch 5: MAE: 17.250217 RMSE: 26.315384 MAPE: 0.155593
+2026-01-24 23:02: *********************************Current best model saved!
+2026-01-24 23:02: Train Epoch 5: 0/185 Loss: 41.293663
+2026-01-24 23:02: Train Epoch 5: 20/185 Loss: 29.235266
+2026-01-24 23:02: Train Epoch 5: 40/185 Loss: 32.934002
+2026-01-24 23:02: Train Epoch 5: 60/185 Loss: 27.088705
+2026-01-24 23:02: Train Epoch 5: 80/185 Loss: 28.925655
+2026-01-24 23:02: Train Epoch 5: 100/185 Loss: 27.164171
+2026-01-24 23:02: Train Epoch 5: 120/185 Loss: 26.636433
+2026-01-24 23:02: Train Epoch 5: 140/185 Loss: 27.672325
+2026-01-24 23:02: Train Epoch 5: 160/185 Loss: 26.332121
+2026-01-24 23:02: Train Epoch 5: 180/185 Loss: 26.977755
+2026-01-24 23:02: **********Train Epoch 5: Average Loss: 29.115247
+2026-01-24 23:02: **********Train Epoch 5: MAE: 29.115247 RMSE: 38.232741 MAPE: 0.326677
+2026-01-24 23:02: **********Val Epoch 5: Average Loss: 18.087529
+2026-01-24 23:02: **********Val Epoch 5: MAE: 18.087529 RMSE: 26.807804 MAPE: 0.205360
+2026-01-24 23:02: Train Epoch 6: 0/185 Loss: 37.096806
+2026-01-24 23:02: Train Epoch 6: 20/185 Loss: 29.683960
+2026-01-24 23:02: Train Epoch 6: 40/185 Loss: 25.195307
+2026-01-24 23:03: Train Epoch 6: 60/185 Loss: 25.437523
+2026-01-24 23:03: Train Epoch 6: 80/185 Loss: 25.223368
+2026-01-24 23:03: Train Epoch 6: 100/185 Loss: 25.348246
+2026-01-24 23:03: Train Epoch 6: 120/185 Loss: 24.453243
+2026-01-24 23:03: Train Epoch 6: 140/185 Loss: 25.310335
+2026-01-24 23:03: Train Epoch 6: 160/185 Loss: 25.326042
+2026-01-24 23:03: Train Epoch 6: 180/185 Loss: 25.143099
+2026-01-24 23:03: **********Train Epoch 6: Average Loss: 26.698955
+2026-01-24 23:03: **********Train Epoch 6: MAE: 26.698955 RMSE: 35.587426 MAPE: 0.301584
+2026-01-24 23:03: **********Val Epoch 6: Average Loss: 16.736371
+2026-01-24 23:03: **********Val Epoch 6: MAE: 16.736371 RMSE: 25.745373 MAPE: 0.146896
+2026-01-24 23:03: *********************************Current best model saved!
+2026-01-24 23:03: Train Epoch 6: 0/185 Loss: 34.797905
+2026-01-24 23:03: Train Epoch 6: 20/185 Loss: 26.504604
+2026-01-24 23:03: Train Epoch 6: 40/185 Loss: 23.317301
+2026-01-24 23:03: Train Epoch 6: 60/185 Loss: 24.409363
+2026-01-24 23:03: Train Epoch 6: 80/185 Loss: 24.824419
+2026-01-24 23:03: Train Epoch 6: 100/185 Loss: 25.725115
+2026-01-24 23:03: Train Epoch 6: 120/185 Loss: 23.857649
+2026-01-24 23:03: Train Epoch 6: 140/185 Loss: 23.400074
+2026-01-24 23:03: Train Epoch 6: 160/185 Loss: 22.441843
+2026-01-24 23:03: Train Epoch 6: 180/185 Loss: 22.998417
+2026-01-24 23:03: **********Train Epoch 6: Average Loss: 26.078151
+2026-01-24 23:03: **********Train Epoch 6: MAE: 26.078151 RMSE: 34.757618 MAPE: 0.296006
+2026-01-24 23:04: **********Val Epoch 6: Average Loss: 18.502956
+2026-01-24 23:04: **********Val Epoch 6: MAE: 18.502956 RMSE: 27.029260 MAPE: 0.200391
+2026-01-24 23:04: Train Epoch 7: 0/185 Loss: 30.599722
+2026-01-24 23:04: Train Epoch 7: 20/185 Loss: 25.315992
+2026-01-24 23:04: Train Epoch 7: 40/185 Loss: 27.413877
+2026-01-24 23:04: Train Epoch 7: 60/185 Loss: 22.523352
+2026-01-24 23:04: Train Epoch 7: 80/185 Loss: 23.594414
+2026-01-24 23:04: Train Epoch 7: 100/185 Loss: 22.679226
+2026-01-24 23:04: Train Epoch 7: 120/185 Loss: 22.029539
+2026-01-24 23:04: Train Epoch 7: 140/185 Loss: 24.271267
+2026-01-24 23:04: Train Epoch 7: 160/185 Loss: 22.893353
+2026-01-24 23:04: Train Epoch 7: 180/185 Loss: 22.535246
+2026-01-24 23:04: **********Train Epoch 7: Average Loss: 24.666756
+2026-01-24 23:04: **********Train Epoch 7: MAE: 24.666756 RMSE: 33.202850 MAPE: 0.280522
+2026-01-24 23:04: **********Val Epoch 7: Average Loss: 18.786176
+2026-01-24 23:04: **********Val Epoch 7: MAE: 18.786176 RMSE: 27.109294 MAPE: 0.214013
+2026-01-24 23:04: Train Epoch 7: 0/185 Loss: 29.071081
+2026-01-24 23:04: Train Epoch 7: 20/185 Loss: 28.798574
+2026-01-24 23:04: Train Epoch 7: 40/185 Loss: 22.472715
+2026-01-24 23:04: Train Epoch 7: 60/185 Loss: 24.220757
+2026-01-24 23:04: Train Epoch 7: 80/185 Loss: 22.688860
+2026-01-24 23:04: Train Epoch 7: 100/185 Loss: 22.625526
+2026-01-24 23:05: Train Epoch 7: 120/185 Loss: 22.611071
+2026-01-24 23:05: Train Epoch 7: 140/185 Loss: 23.065945
+2026-01-24 23:05: Train Epoch 7: 160/185 Loss: 21.984365
+2026-01-24 23:05: Train Epoch 7: 180/185 Loss: 21.240469
+2026-01-24 23:05: **********Train Epoch 7: Average Loss: 23.704954
+2026-01-24 23:05: **********Train Epoch 7: MAE: 23.704954 RMSE: 32.221285 MAPE: 0.270000
+2026-01-24 23:05: **********Val Epoch 7: Average Loss: 17.316459
+2026-01-24 23:05: **********Val Epoch 7: MAE: 17.316459 RMSE: 25.928576 MAPE: 0.182381
+2026-01-24 23:05: Train Epoch 8: 0/185 Loss: 25.891584
+2026-01-24 23:05: Train Epoch 8: 20/185 Loss: 22.821518
+2026-01-24 23:05: Train Epoch 8: 40/185 Loss: 22.196705
+2026-01-24 23:05: Train Epoch 8: 60/185 Loss: 21.898705
+2026-01-24 23:05: Train Epoch 8: 80/185 Loss: 21.218536
+2026-01-24 23:05: Train Epoch 8: 100/185 Loss: 21.752966
+2026-01-24 23:05: Train Epoch 8: 120/185 Loss: 21.899189
+2026-01-24 23:05: Train Epoch 8: 140/185 Loss: 21.651007
+2026-01-24 23:05: Train Epoch 8: 160/185 Loss: 22.274849
+2026-01-24 23:05: Train Epoch 8: 180/185 Loss: 21.204765
+2026-01-24 23:05: **********Train Epoch 8: Average Loss: 22.044248
+2026-01-24 23:05: **********Train Epoch 8: MAE: 22.044248 RMSE: 30.509089 MAPE: 0.249003
+2026-01-24 23:05: **********Val Epoch 8: Average Loss: 16.163521
+2026-01-24 23:05: **********Val Epoch 8: MAE: 16.163521 RMSE: 25.115918 MAPE: 0.145664
+2026-01-24 23:05: *********************************Current best model saved!
+2026-01-24 23:05: Train Epoch 8: 0/185 Loss: 23.157188
+2026-01-24 23:05: Train Epoch 8: 20/185 Loss: 20.611956
+2026-01-24 23:06: Train Epoch 8: 40/185 Loss: 22.631435
+2026-01-24 23:06: Train Epoch 8: 60/185 Loss: 19.812387
+2026-01-24 23:06: Train Epoch 8: 80/185 Loss: 20.811066
+2026-01-24 23:06: Train Epoch 8: 100/185 Loss: 21.057308
+2026-01-24 23:06: Train Epoch 8: 120/185 Loss: 21.348391
+2026-01-24 23:06: Train Epoch 8: 140/185 Loss: 20.554211
+2026-01-24 23:06: Train Epoch 8: 160/185 Loss: 22.555593
+2026-01-24 23:06: Train Epoch 8: 180/185 Loss: 21.047279
+2026-01-24 23:06: **********Train Epoch 8: Average Loss: 21.444009
+2026-01-24 23:06: **********Train Epoch 8: MAE: 21.444009 RMSE: 29.873923 MAPE: 0.241454
+2026-01-24 23:06: **********Val Epoch 8: Average Loss: 15.820428
+2026-01-24 23:06: **********Val Epoch 8: MAE: 15.820428 RMSE: 24.845139 MAPE: 0.135498
+2026-01-24 23:06: *********************************Current best model saved!
+2026-01-24 23:06: Train Epoch 9: 0/185 Loss: 23.861565
+2026-01-24 23:06: Train Epoch 9: 20/185 Loss: 20.989664
+2026-01-24 23:06: Train Epoch 9: 40/185 Loss: 20.223309
+2026-01-24 23:06: Train Epoch 9: 60/185 Loss: 21.738426
+2026-01-24 23:06: Train Epoch 9: 80/185 Loss: 23.973063
+2026-01-24 23:06: Train Epoch 9: 100/185 Loss: 20.684469
+2026-01-24 23:06: Train Epoch 9: 120/185 Loss: 21.003603
+2026-01-24 23:06: Train Epoch 9: 140/185 Loss: 20.063309
+2026-01-24 23:06: Train Epoch 9: 160/185 Loss: 19.595795
+2026-01-24 23:07: Train Epoch 9: 180/185 Loss: 21.112501
+2026-01-24 23:07: **********Train Epoch 9: Average Loss: 20.981457
+2026-01-24 23:07: **********Train Epoch 9: MAE: 20.981457 RMSE: 29.376336 MAPE: 0.234568
+2026-01-24 23:07: **********Val Epoch 9: Average Loss: 15.847867
+2026-01-24 23:07: **********Val Epoch 9: MAE: 15.847867 RMSE: 24.824391 MAPE: 0.141498
+2026-01-24 23:07: Train Epoch 9: 0/185 Loss: 22.127436
+2026-01-24 23:07: Train Epoch 9: 20/185 Loss: 21.895096
+2026-01-24 23:07: Train Epoch 9: 40/185 Loss: 20.162704
+2026-01-24 23:07: Train Epoch 9: 60/185 Loss: 21.259176
+2026-01-24 23:07: Train Epoch 9: 80/185 Loss: 19.953800
+2026-01-24 23:07: Train Epoch 9: 100/185 Loss: 20.986284
+2026-01-24 23:07: Train Epoch 9: 120/185 Loss: 19.870625
+2026-01-24 23:07: Train Epoch 9: 140/185 Loss: 20.297184
+2026-01-24 23:07: Train Epoch 9: 160/185 Loss: 20.936726
+2026-01-24 23:07: Train Epoch 9: 180/185 Loss: 20.953676
+2026-01-24 23:07: **********Train Epoch 9: Average Loss: 20.519069
+2026-01-24 23:07: **********Train Epoch 9: MAE: 20.519069 RMSE: 28.932151 MAPE: 0.228316
+2026-01-24 23:07: **********Val Epoch 9: Average Loss: 15.952595
+2026-01-24 23:07: **********Val Epoch 9: MAE: 15.952595 RMSE: 24.879054 MAPE: 0.147928
+2026-01-24 23:07: Train Epoch 10: 0/185 Loss: 20.775099
+2026-01-24 23:07: Train Epoch 10: 20/185 Loss: 20.664713
+2026-01-24 23:07: Train Epoch 10: 40/185 Loss: 21.018679
+2026-01-24 23:07: Train Epoch 10: 60/185 Loss: 20.249111
+2026-01-24 23:07: Train Epoch 10: 80/185 Loss: 19.826159
+2026-01-24 23:08: Train Epoch 10: 100/185 Loss: 20.652636
+2026-01-24 23:08: Train Epoch 10: 120/185 Loss: 20.062151
+2026-01-24 23:08: Train Epoch 10: 140/185 Loss: 18.884821
+2026-01-24 23:08: Train Epoch 10: 160/185 Loss: 19.535776
+2026-01-24 23:08: Train Epoch 10: 180/185 Loss: 20.312384
+2026-01-24 23:08: **********Train Epoch 10: Average Loss: 20.238163
+2026-01-24 23:08: **********Train Epoch 10: MAE: 20.238163 RMSE: 28.608320 MAPE: 0.224532
+2026-01-24 23:08: **********Val Epoch 10: Average Loss: 21.168423
+2026-01-24 23:08: **********Val Epoch 10: MAE: 21.168423 RMSE: 28.787020 MAPE: 0.286950
+2026-01-24 23:08: Train Epoch 10: 0/185 Loss: 18.093145
+2026-01-24 23:08: Train Epoch 10: 20/185 Loss: 20.614050
+2026-01-24 23:08: Train Epoch 10: 40/185 Loss: 18.831718
+2026-01-24 23:08: Train Epoch 10: 60/185 Loss: 20.639202
+2026-01-24 23:08: Train Epoch 10: 80/185 Loss: 20.131161
+2026-01-24 23:08: Train Epoch 10: 100/185 Loss: 21.285189
+2026-01-24 23:08: Train Epoch 10: 120/185 Loss: 19.346386
+2026-01-24 23:08: Train Epoch 10: 140/185 Loss: 21.419249
+2026-01-24 23:08: Train Epoch 10: 160/185 Loss: 19.985186
+2026-01-24 23:08: Train Epoch 10: 180/185 Loss: 19.376045
+2026-01-24 23:08: **********Train Epoch 10: Average Loss: 20.074527
+2026-01-24 23:08: **********Train Epoch 10: MAE: 20.074527 RMSE: 28.426496 MAPE: 0.222879
+2026-01-24 23:08: **********Val Epoch 10: Average Loss: 15.501403
+2026-01-24 23:08: **********Val Epoch 10: MAE: 15.501403 RMSE: 24.543485 MAPE: 0.126295
+2026-01-24 23:08: *********************************Current best model saved!
+2026-01-24 23:08: Train Epoch 11: 0/185 Loss: 20.437773
+2026-01-24 23:08: Train Epoch 11: 20/185 Loss: 20.153084
+2026-01-24 23:09: Train Epoch 11: 40/185 Loss: 20.289566
+2026-01-24 23:09: Train Epoch 11: 60/185 Loss: 20.723728
+2026-01-24 23:09: Train Epoch 11: 80/185 Loss: 19.939154
+2026-01-24 23:09: Train Epoch 11: 100/185 Loss: 20.398537
+2026-01-24 23:09: Train Epoch 11: 120/185 Loss: 18.993866
+2026-01-24 23:09: Train Epoch 11: 140/185 Loss: 19.042139
+2026-01-24 23:09: Train Epoch 11: 160/185 Loss: 19.822794
+2026-01-24 23:09: Train Epoch 11: 180/185 Loss: 19.241821
+2026-01-24 23:09: **********Train Epoch 11: Average Loss: 19.599707
+2026-01-24 23:09: **********Train Epoch 11: MAE: 19.599707 RMSE: 27.958912 MAPE: 0.215222
+2026-01-24 23:09: **********Val Epoch 11: Average Loss: 15.383743
+2026-01-24 23:09: **********Val Epoch 11: MAE: 15.383743 RMSE: 24.385278 MAPE: 0.128215
+2026-01-24 23:09: *********************************Current best model saved!
+2026-01-24 23:09: Train Epoch 11: 0/185 Loss: 20.018559
+2026-01-24 23:09: Train Epoch 11: 20/185 Loss: 19.219013
+2026-01-24 23:09: Train Epoch 11: 40/185 Loss: 19.572557
+2026-01-24 23:09: Train Epoch 11: 60/185 Loss: 19.269791
+2026-01-24 23:09: Train Epoch 11: 80/185 Loss: 18.943190
+2026-01-24 23:09: Train Epoch 11: 100/185 Loss: 21.011129
+2026-01-24 23:09: Train Epoch 11: 120/185 Loss: 19.975266
+2026-01-24 23:09: Train Epoch 11: 140/185 Loss: 20.943182
+2026-01-24 23:09: Train Epoch 11: 160/185 Loss: 18.316347
+2026-01-24 23:09: Train Epoch 11: 180/185 Loss: 18.268221
+2026-01-24 23:10: **********Train Epoch 11: Average Loss: 19.573305
+2026-01-24 23:10: **********Train Epoch 11: MAE: 19.573305 RMSE: 27.906232 MAPE: 0.215534
+2026-01-24 23:10: **********Val Epoch 11: Average Loss: 19.872217
+2026-01-24 23:10: **********Val Epoch 11: MAE: 19.872217 RMSE: 27.560616 MAPE: 0.267694
+2026-01-24 23:10: Train Epoch 12: 0/185 Loss: 19.939615
+2026-01-24 23:10: Train Epoch 12: 20/185 Loss: 17.296377
+2026-01-24 23:10: Train Epoch 12: 40/185 Loss: 17.749163
+2026-01-24 23:10: Train Epoch 12: 60/185 Loss: 19.204115
+2026-01-24 23:10: Train Epoch 12: 80/185 Loss: 17.684334
+2026-01-24 23:10: Train Epoch 12: 100/185 Loss: 18.388222
+2026-01-24 23:10: Train Epoch 12: 120/185 Loss: 18.072777
+2026-01-24 23:10: Train Epoch 12: 140/185 Loss: 19.756287
+2026-01-24 23:10: Train Epoch 12: 160/185 Loss: 19.057837
+2026-01-24 23:10: Train Epoch 12: 180/185 Loss: 18.695074
+2026-01-24 23:10: **********Train Epoch 12: Average Loss: 19.051995
+2026-01-24 23:10: **********Train Epoch 12: MAE: 19.051995 RMSE: 27.392363 MAPE: 0.207645
+2026-01-24 23:10: **********Val Epoch 12: Average Loss: 16.513454
+2026-01-24 23:10: **********Val Epoch 12: MAE: 16.513454 RMSE: 25.154998 MAPE: 0.174723
+2026-01-24 23:10: Train Epoch 12: 0/185 Loss: 17.924006
+2026-01-24 23:10: Train Epoch 12: 20/185 Loss: 20.807940
+2026-01-24 23:10: Train Epoch 12: 40/185 Loss: 19.713606
+2026-01-24 23:10: Train Epoch 12: 60/185 Loss: 19.906025
+2026-01-24 23:10: Train Epoch 12: 80/185 Loss: 17.904980
+2026-01-24 23:10: Train Epoch 12: 100/185 Loss: 18.772335
+2026-01-24 23:11: Train Epoch 12: 120/185 Loss: 18.798475
+2026-01-24 23:11: Train Epoch 12: 140/185 Loss: 19.286140
+2026-01-24 23:11: Train Epoch 12: 160/185 Loss: 19.305141
+2026-01-24 23:11: Train Epoch 12: 180/185 Loss: 18.628361
+2026-01-24 23:11: **********Train Epoch 12: Average Loss: 18.850598
+2026-01-24 23:11: **********Train Epoch 12: MAE: 18.850598 RMSE: 27.195599 MAPE: 0.204626
+2026-01-24 23:11: **********Val Epoch 12: Average Loss: 15.632467
+2026-01-24 23:11: **********Val Epoch 12: MAE: 15.632467 RMSE: 24.296471 MAPE: 0.136747
+2026-01-24 23:11: Train Epoch 13: 0/185 Loss: 19.288918
+2026-01-24 23:11: Train Epoch 13: 20/185 Loss: 19.552181
+2026-01-24 23:11: Train Epoch 13: 40/185 Loss: 19.596331
+2026-01-24 23:11: Train Epoch 13: 60/185 Loss: 20.015560
+2026-01-24 23:11: Train Epoch 13: 80/185 Loss: 19.190672
+2026-01-24 23:11: Train Epoch 13: 100/185 Loss: 18.181450
+2026-01-24 23:11: Train Epoch 13: 120/185 Loss: 18.163242
+2026-01-24 23:11: Train Epoch 13: 140/185 Loss: 19.223036
+2026-01-24 23:11: Train Epoch 13: 160/185 Loss: 18.856924
+2026-01-24 23:11: Train Epoch 13: 180/185 Loss: 18.160933
+2026-01-24 23:11: **********Train Epoch 13: Average Loss: 18.380054
+2026-01-24 23:11: **********Train Epoch 13: MAE: 18.380054 RMSE: 26.779047 MAPE: 0.196203
+2026-01-24 23:11: **********Val Epoch 13: Average Loss: 16.990612
+2026-01-24 23:11: **********Val Epoch 13: MAE: 16.990612 RMSE: 25.495848 MAPE: 0.177764
+2026-01-24 23:11: Train Epoch 13: 0/185 Loss: 18.410059
+2026-01-24 23:12: Train Epoch 13: 20/185 Loss: 19.838249
+2026-01-24 23:12: Train Epoch 13: 40/185 Loss: 18.880499
+2026-01-24 23:12: Train Epoch 13: 60/185 Loss: 17.393194
+2026-01-24 23:12: Train Epoch 13: 80/185 Loss: 16.368599
+2026-01-24 23:12: Train Epoch 13: 100/185 Loss: 17.774990
+2026-01-24 23:12: Train Epoch 13: 120/185 Loss: 17.401886
+2026-01-24 23:12: Train Epoch 13: 140/185 Loss: 20.217852
+2026-01-24 23:12: Train Epoch 13: 160/185 Loss: 20.813147
+2026-01-24 23:12: Train Epoch 13: 180/185 Loss: 17.703070
+2026-01-24 23:12: **********Train Epoch 13: Average Loss: 18.676378
+2026-01-24 23:12: **********Train Epoch 13: MAE: 18.676378 RMSE: 27.026756 MAPE: 0.201103
+2026-01-24 23:12: **********Val Epoch 13: Average Loss: 15.288828
+2026-01-24 23:12: **********Val Epoch 13: MAE: 15.288828 RMSE: 24.214646 MAPE: 0.126347
+2026-01-24 23:12: *********************************Current best model saved!
+2026-01-24 23:12: Train Epoch 14: 0/185 Loss: 17.521675
+2026-01-24 23:12: Train Epoch 14: 20/185 Loss: 19.593641
+2026-01-24 23:12: Train Epoch 14: 40/185 Loss: 19.423487
+2026-01-24 23:12: Train Epoch 14: 60/185 Loss: 17.239973
+2026-01-24 23:12: Train Epoch 14: 80/185 Loss: 18.796558
+2026-01-24 23:12: Train Epoch 14: 100/185 Loss: 17.697060
+2026-01-24 23:12: Train Epoch 14: 120/185 Loss: 18.354431
+2026-01-24 23:12: Train Epoch 14: 140/185 Loss: 17.551989
+2026-01-24 23:12: Train Epoch 14: 160/185 Loss: 18.225019
+2026-01-24 23:13: Train Epoch 14: 180/185 Loss: 18.370399
+2026-01-24 23:13: **********Train Epoch 14: Average Loss: 18.469261
+2026-01-24 23:13: **********Train Epoch 14: MAE: 18.469261 RMSE: 26.809710 MAPE: 0.199615
+2026-01-24 23:13: **********Val Epoch 14: Average Loss: 15.507410
+2026-01-24 23:13: **********Val Epoch 14: MAE: 15.507410 RMSE: 24.243468 MAPE: 0.130278
+2026-01-24 23:13: Train Epoch 14: 0/185 Loss: 17.971458
+2026-01-24 23:13: Train Epoch 14: 20/185 Loss: 17.721106
+2026-01-24 23:13: Train Epoch 14: 40/185 Loss: 17.723776
+2026-01-24 23:13: Train Epoch 14: 60/185 Loss: 16.686216
+2026-01-24 23:13: Train Epoch 14: 80/185 Loss: 17.033070
+2026-01-24 23:13: Train Epoch 14: 100/185 Loss: 16.745291
+2026-01-24 23:13: Train Epoch 14: 120/185 Loss: 17.339729
+2026-01-24 23:13: Train Epoch 14: 140/185 Loss: 17.004665
+2026-01-24 23:13: Train Epoch 14: 160/185 Loss: 17.101061
+2026-01-24 23:13: Train Epoch 14: 180/185 Loss: 16.651903
+2026-01-24 23:13: **********Train Epoch 14: Average Loss: 17.776830
+2026-01-24 23:13: **********Train Epoch 14: MAE: 17.776830 RMSE: 26.213696 MAPE: 0.185843
+2026-01-24 23:13: **********Val Epoch 14: Average Loss: 15.343789
+2026-01-24 23:13: **********Val Epoch 14: MAE: 15.343789 RMSE: 24.280797 MAPE: 0.138864
+2026-01-24 23:13: Train Epoch 15: 0/185 Loss: 17.630157
+2026-01-24 23:13: Train Epoch 15: 20/185 Loss: 17.730583
+2026-01-24 23:13: Train Epoch 15: 40/185 Loss: 17.659071
+2026-01-24 23:13: Train Epoch 15: 60/185 Loss: 17.644684
+2026-01-24 23:13: Train Epoch 15: 80/185 Loss: 18.181561
+2026-01-24 23:14: Train Epoch 15: 100/185 Loss: 17.936600
+2026-01-24 23:14: Train Epoch 15: 120/185 Loss: 18.434744
+2026-01-24 23:14: Train Epoch 15: 140/185 Loss: 17.736570
+2026-01-24 23:14: Train Epoch 15: 160/185 Loss: 18.341881
+2026-01-24 23:14: Train Epoch 15: 180/185 Loss: 16.692564
+2026-01-24 23:14: **********Train Epoch 15: Average Loss: 17.752115
+2026-01-24 23:14: **********Train Epoch 15: MAE: 17.752115 RMSE: 26.174393 MAPE: 0.185975
+2026-01-24 23:14: **********Val Epoch 15: Average Loss: 15.715916
+2026-01-24 23:14: **********Val Epoch 15: MAE: 15.715916 RMSE: 24.899017 MAPE: 0.123704
+2026-01-24 23:14: Train Epoch 15: 0/185 Loss: 17.587341
+2026-01-24 23:14: Train Epoch 15: 20/185 Loss: 18.264729
+2026-01-24 23:14: Train Epoch 15: 40/185 Loss: 17.504990
+2026-01-24 23:14: Train Epoch 15: 60/185 Loss: 16.369396
+2026-01-24 23:14: Train Epoch 15: 80/185 Loss: 18.624426
+2026-01-24 23:14: Train Epoch 15: 100/185 Loss: 17.616415
+2026-01-24 23:16: Experiment log path in: /root/autodl-tmp/ntk_project/ntk/log/in6_out1
+2026-01-24 23:16: Train: (11890, 6, 61, 3), (11890, 1, 61, 3)
+2026-01-24 23:16: Val: (1698, 6, 61, 3), (1698, 1, 61, 3)
+2026-01-24 23:16: Test: (3398, 6, 61, 3), (3398, 1, 61, 3)
+2026-01-24 23:16: memory_usage: (0.8095703125, 2.0)
+2026-01-24 23:16: Applying learning rate decay.
+2026-01-24 23:16: *****************Model Parameter*****************
+2026-01-24 23:16: data_l torch.Size([64]) True
+2026-01-24 23:16: tod_embedding_l torch.Size([32]) True
+2026-01-24 23:16: dow_embedding_l torch.Size([32]) True
+2026-01-24 23:16: tod_embedding.weight torch.Size([288, 32]) True
+2026-01-24 23:16: dow_embedding.weight torch.Size([7, 32]) True
+2026-01-24 23:16: SpatialEmbedding.B_sp torch.Size([307, 32]) True
+2026-01-24 23:16: SpatialEmbedding.B_su torch.Size([307, 32]) True
+2026-01-24 23:16: data_embedding.weight torch.Size([64, 1]) True
+2026-01-24 23:16: data_embedding.bias torch.Size([64]) True
+2026-01-24 23:16: MLPA.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 23:16: MLPA.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 23:16: MLPA.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 23:16: MLPA.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 23:16: MLPB.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 23:16: MLPB.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 23:16: MLPB.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 23:16: MLPB.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 23:16: MLPC.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-24 23:16: MLPC.blocks.0.linear.bias torch.Size([64]) True
+2026-01-24 23:16: MLPC.blocks.0.norm.weight torch.Size([64]) True
+2026-01-24 23:16: MLPC.blocks.0.norm.bias torch.Size([64]) True
+2026-01-24 23:16: MLPD.blocks.0.linear.weight torch.Size([128, 128]) True
+2026-01-24 23:16: MLPD.blocks.0.linear.bias torch.Size([128]) True
+2026-01-24 23:16: MLPD.blocks.0.norm.weight torch.Size([128]) True
+2026-01-24 23:16: MLPD.blocks.0.norm.bias torch.Size([128]) True
+2026-01-24 23:16: MLPE.blocks.0.linear.weight torch.Size([192, 192]) True
+2026-01-24 23:16: MLPE.blocks.0.linear.bias torch.Size([192]) True
+2026-01-24 23:16: MLPE.blocks.0.norm.weight torch.Size([192]) True
+2026-01-24 23:16: MLPE.blocks.0.norm.bias torch.Size([192]) True
+2026-01-24 23:16: MLPE.blocks.1.linear.weight torch.Size([192, 192]) True
+2026-01-24 23:16: MLPE.blocks.1.linear.bias torch.Size([192]) True
+2026-01-24 23:16: MLPE.blocks.1.norm.weight torch.Size([192]) True
+2026-01-24 23:16: MLPE.blocks.1.norm.bias torch.Size([192]) True
+2026-01-24 23:16: MLPE.blocks.2.linear.weight torch.Size([192, 192]) True
+2026-01-24 23:16: MLPE.blocks.2.linear.bias torch.Size([192]) True
+2026-01-24 23:16: MLPE.blocks.2.norm.weight torch.Size([192]) True
+2026-01-24 23:16: MLPE.blocks.2.norm.bias torch.Size([192]) True
+2026-01-24 23:16: MLPF.blocks.0.linear.weight torch.Size([6, 6]) True
+2026-01-24 23:16: MLPF.blocks.0.linear.bias torch.Size([6]) True
+2026-01-24 23:16: MLPF.blocks.0.norm.weight torch.Size([6]) True
+2026-01-24 23:16: MLPF.blocks.0.norm.bias torch.Size([6]) True
+2026-01-24 23:16: MLPF.blocks.1.linear.weight torch.Size([6, 6]) True
+2026-01-24 23:16: MLPF.blocks.1.linear.bias torch.Size([6]) True
+2026-01-24 23:16: MLPF.blocks.1.norm.weight torch.Size([6]) True
+2026-01-24 23:16: MLPF.blocks.1.norm.bias torch.Size([6]) True
+2026-01-24 23:16: steps_linear.weight torch.Size([1, 6]) True
+2026-01-24 23:16: steps_linear.bias torch.Size([1]) True
+2026-01-24 23:16: out_linear.weight torch.Size([1, 192]) True
+2026-01-24 23:16: out_linear.bias torch.Size([1]) True
+2026-01-24 23:16: gcn.filter_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 23:16: gcn.filter_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.filter_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 23:16: gcn.filter_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.filter_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 23:16: gcn.filter_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.filter_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 23:16: gcn.filter_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.filter_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 23:16: gcn.filter_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.filter_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 23:16: gcn.filter_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.filter_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 23:16: gcn.filter_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.filter_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 23:16: gcn.filter_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.gate_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 23:16: gcn.gate_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.gate_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 23:16: gcn.gate_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.gate_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 23:16: gcn.gate_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.gate_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 23:16: gcn.gate_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.gate_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-24 23:16: gcn.gate_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.gate_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-24 23:16: gcn.gate_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.gate_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-24 23:16: gcn.gate_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.gate_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-24 23:16: gcn.gate_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-24 23:16: gcn.residual_convs.0.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 23:16: gcn.residual_convs.0.bias torch.Size([16]) True
+2026-01-24 23:16: gcn.residual_convs.1.weight torch.Size([16, 16, 1, 1]) True
+2026-01-24 23:16: gcn.residual_convs.1.bias torch.Size([16]) True
+2026-01-24 23:16: gcn.skip_convs.0.weight torch.Size([32, 16, 1, 7]) True
+2026-01-24 23:16: gcn.skip_convs.0.bias torch.Size([32]) True
+2026-01-24 23:16: gcn.skip_convs.1.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 23:16: gcn.skip_convs.1.bias torch.Size([32]) True
+2026-01-24 23:16: gcn.gconv1.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 23:16: gcn.gconv1.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 23:16: gcn.gconv1.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 23:16: gcn.gconv1.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 23:16: gcn.gconv2.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 23:16: gcn.gconv2.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 23:16: gcn.gconv2.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-24 23:16: gcn.gconv2.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-24 23:16: gcn.norm.0.weight torch.Size([16, 61, 7]) True
+2026-01-24 23:16: gcn.norm.0.bias torch.Size([16, 61, 7]) True
+2026-01-24 23:16: gcn.norm.1.weight torch.Size([16, 61, 1]) True
+2026-01-24 23:16: gcn.norm.1.bias torch.Size([16, 61, 1]) True
+2026-01-24 23:16: gcn.start_conv.weight torch.Size([16, 1, 1, 1]) True
+2026-01-24 23:16: gcn.start_conv.bias torch.Size([16]) True
+2026-01-24 23:16: gcn.gc.emb1.weight torch.Size([61, 10]) True
+2026-01-24 23:16: gcn.gc.emb2.weight torch.Size([61, 10]) True
+2026-01-24 23:16: gcn.gc.lin1.weight torch.Size([10, 10]) True
+2026-01-24 23:16: gcn.gc.lin1.bias torch.Size([10]) True
+2026-01-24 23:16: gcn.gc.lin2.weight torch.Size([10, 10]) True
+2026-01-24 23:16: gcn.gc.lin2.bias torch.Size([10]) True
+2026-01-24 23:16: gcn.end_conv_1.weight torch.Size([64, 32, 1, 1]) True
+2026-01-24 23:16: gcn.end_conv_1.bias torch.Size([64]) True
+2026-01-24 23:16: gcn.end_conv_2.weight torch.Size([1, 64, 1, 1]) True
+2026-01-24 23:16: gcn.end_conv_2.bias torch.Size([1]) True
+2026-01-24 23:16: gcn.skip0.weight torch.Size([32, 1, 1, 13]) True
+2026-01-24 23:16: gcn.skip0.bias torch.Size([32]) True
+2026-01-24 23:16: gcn.skipE.weight torch.Size([32, 16, 1, 1]) True
+2026-01-24 23:16: gcn.skipE.bias torch.Size([32]) True
+2026-01-24 23:16: Total params num: 204373
+2026-01-24 23:16: *****************Finish Parameter****************
+2026-01-24 23:16: Train Epoch 1: 0/185 Loss: 3998.605957
+2026-01-24 23:16: Train Epoch 1: 20/185 Loss: 257.294800
+2026-01-24 23:16: Train Epoch 1: 40/185 Loss: 210.580292
+2026-01-24 23:16: Train Epoch 1: 60/185 Loss: 176.553299
+2026-01-24 23:16: Train Epoch 1: 80/185 Loss: 159.390289
+2026-01-24 23:16: Train Epoch 1: 100/185 Loss: 146.326126
+2026-01-24 23:16: Train Epoch 1: 120/185 Loss: 134.017044
+2026-01-24 23:16: Train Epoch 1: 140/185 Loss: 119.903252
+2026-01-24 23:16: Train Epoch 1: 160/185 Loss: 113.336365
+2026-01-24 23:16: Train Epoch 1: 180/185 Loss: 104.281563
+2026-01-24 23:16: **********Train Epoch 1: Average Loss: 249.341938
+2026-01-24 23:16: **********Train Epoch 1: MAE: 249.341938 RMSE: 290.929521 MAPE: 1.002248
+2026-01-24 23:16: Train Epoch 1: 0/185 Loss: 104.273674
+2026-01-24 23:16: Train Epoch 1: 20/185 Loss: 100.181046
+2026-01-24 23:16: Train Epoch 1: 40/185 Loss: 99.485634
+2026-01-24 23:16: Train Epoch 1: 60/185 Loss: 97.100510
+2026-01-24 23:16: Train Epoch 1: 80/185 Loss: 89.794708
+2026-01-24 23:16: Train Epoch 1: 100/185 Loss: 88.679359
+2026-01-24 23:17: Train Epoch 1: 120/185 Loss: 85.594704
+2026-01-24 23:17: Train Epoch 1: 140/185 Loss: 81.216293
+2026-01-24 23:17: Train Epoch 1: 160/185 Loss: 80.331223
+2026-01-24 23:17: Train Epoch 1: 180/185 Loss: 76.195557
+2026-01-24 23:17: **********Train Epoch 1: Average Loss: 89.986248
+2026-01-24 23:17: **********Train Epoch 1: MAE: 89.986248 RMSE: 113.500517 MAPE: 0.710312
+2026-01-24 23:17: **********Val Epoch 1: Average Loss: 26.698000
+2026-01-24 23:17: **********Val Epoch 1: MAE: 26.698000 RMSE: 38.163599 MAPE: 0.236346
+2026-01-24 23:17: *********************************Current best model saved!
+2026-01-24 23:17: Train Epoch 2: 0/185 Loss: 77.635529
+2026-01-24 23:17: Train Epoch 2: 20/185 Loss: 74.976364
+2026-01-24 23:17: Train Epoch 2: 40/185 Loss: 73.463165
+2026-01-24 23:17: Train Epoch 2: 60/185 Loss: 69.618423
+2026-01-24 23:17: Train Epoch 2: 80/185 Loss: 68.411720
+2026-01-24 23:17: Train Epoch 2: 100/185 Loss: 66.017014
+2026-01-24 23:17: Train Epoch 2: 120/185 Loss: 65.381790
+2026-01-24 23:17: Train Epoch 2: 140/185 Loss: 63.399452
+2026-01-24 23:17: Train Epoch 2: 160/185 Loss: 62.451042
+2026-01-24 23:17: Train Epoch 2: 180/185 Loss: 58.802429
+2026-01-24 23:17: **********Train Epoch 2: Average Loss: 68.086330
+2026-01-24 23:17: **********Train Epoch 2: MAE: 68.086330 RMSE: 86.169039 MAPE: 0.599910
+2026-01-24 23:17: Train Epoch 2: 0/185 Loss: 58.802860
+2026-01-24 23:17: Train Epoch 2: 20/185 Loss: 57.212566
+2026-01-24 23:17: Train Epoch 2: 40/185 Loss: 54.944084
+2026-01-24 23:18: Train Epoch 2: 60/185 Loss: 53.515186
+2026-01-24 23:18: Train Epoch 2: 80/185 Loss: 52.419926
+2026-01-24 23:18: Train Epoch 2: 100/185 Loss: 51.423809
+2026-01-24 23:18: Train Epoch 2: 120/185 Loss: 50.318142
+2026-01-24 23:18: Train Epoch 2: 140/185 Loss: 48.562531
+2026-01-24 23:18: Train Epoch 2: 160/185 Loss: 48.720428
+2026-01-24 23:18: Train Epoch 2: 180/185 Loss: 46.697262
+2026-01-24 23:18: **********Train Epoch 2: Average Loss: 52.662591
+2026-01-24 23:18: **********Train Epoch 2: MAE: 52.662591 RMSE: 67.050988 MAPE: 0.506929
+2026-01-24 23:18: **********Val Epoch 2: Average Loss: 21.440751
+2026-01-24 23:18: **********Val Epoch 2: MAE: 21.440751 RMSE: 31.053736 MAPE: 0.196520
+2026-01-24 23:18: *********************************Current best model saved!
+2026-01-24 23:18: Train Epoch 3: 0/185 Loss: 100.697670
+2026-01-24 23:18: Train Epoch 3: 20/185 Loss: 57.923531
+2026-01-24 23:18: Train Epoch 3: 40/185 Loss: 47.011501
+2026-01-24 23:18: Train Epoch 3: 60/185 Loss: 46.374386
+2026-01-24 23:18: Train Epoch 3: 80/185 Loss: 45.209641
+2026-01-24 23:18: Train Epoch 3: 100/185 Loss: 44.055870
+2026-01-24 23:18: Train Epoch 3: 120/185 Loss: 44.091412
+2026-01-24 23:18: Train Epoch 3: 140/185 Loss: 41.224190
+2026-01-24 23:18: Train Epoch 3: 160/185 Loss: 41.475025
+2026-01-24 23:18: Train Epoch 3: 180/185 Loss: 41.119362
+2026-01-24 23:18: **********Train Epoch 3: Average Loss: 46.653639
+2026-01-24 23:18: **********Train Epoch 3: MAE: 46.653639 RMSE: 59.313437 MAPE: 0.466961
+2026-01-24 23:18: Train Epoch 3: 0/185 Loss: 40.413235
+2026-01-24 23:18: Train Epoch 3: 20/185 Loss: 39.410480
+2026-01-24 23:18: Train Epoch 3: 40/185 Loss: 38.310730
+2026-01-24 23:19: Train Epoch 3: 60/185 Loss: 39.896946
+2026-01-24 23:19: Train Epoch 3: 80/185 Loss: 39.255257
+2026-01-24 23:19: Train Epoch 3: 100/185 Loss: 39.827087
+2026-01-24 23:19: Train Epoch 3: 120/185 Loss: 37.732948
+2026-01-24 23:19: Train Epoch 3: 140/185 Loss: 35.776779
+2026-01-24 23:19: Train Epoch 3: 160/185 Loss: 35.843651
+2026-01-24 23:19: Train Epoch 3: 180/185 Loss: 35.351337
+2026-01-24 23:19: **********Train Epoch 3: Average Loss: 37.958950
+2026-01-24 23:19: **********Train Epoch 3: MAE: 37.958950 RMSE: 48.981897 MAPE: 0.403573
+2026-01-24 23:19: **********Val Epoch 3: Average Loss: 21.141761
+2026-01-24 23:19: **********Val Epoch 3: MAE: 21.141761 RMSE: 29.454660 MAPE: 0.211067
+2026-01-24 23:19: *********************************Current best model saved!
+2026-01-24 23:19: Train Epoch 4: 0/185 Loss: 106.012337
+2026-01-24 23:19: Train Epoch 4: 20/185 Loss: 48.549843
+2026-01-24 23:19: Train Epoch 4: 40/185 Loss: 35.126068
+2026-01-24 23:19: Train Epoch 4: 60/185 Loss: 35.549473
+2026-01-24 23:19: Train Epoch 4: 80/185 Loss: 34.700729
+2026-01-24 23:19: Train Epoch 4: 100/185 Loss: 33.245182
+2026-01-24 23:19: Train Epoch 4: 120/185 Loss: 34.114124
+2026-01-24 23:19: Train Epoch 4: 140/185 Loss: 32.389599
+2026-01-24 23:19: Train Epoch 4: 160/185 Loss: 33.906082
+2026-01-24 23:19: Train Epoch 4: 180/185 Loss: 32.864410
+2026-01-24 23:19: **********Train Epoch 4: Average Loss: 36.839319
+2026-01-24 23:19: **********Train Epoch 4: MAE: 36.839319 RMSE: 47.156419 MAPE: 0.391237
+2026-01-24 23:19: Train Epoch 4: 0/185 Loss: 32.349472
+2026-01-24 23:20: Train Epoch 4: 20/185 Loss: 31.565544
+2026-01-24 23:20: Train Epoch 4: 40/185 Loss: 32.550232
+2026-01-24 23:20: Train Epoch 4: 60/185 Loss: 30.576862
+2026-01-24 23:20: Train Epoch 4: 80/185 Loss: 30.670424
+2026-01-24 23:20: Train Epoch 4: 100/185 Loss: 32.017838
+2026-01-24 23:20: Train Epoch 4: 120/185 Loss: 30.320974
+2026-01-24 23:20: Train Epoch 4: 140/185 Loss: 30.036051
+2026-01-24 23:20: Train Epoch 4: 160/185 Loss: 30.314232
+2026-01-24 23:20: Train Epoch 4: 180/185 Loss: 29.677208
+2026-01-24 23:20: **********Train Epoch 4: Average Loss: 30.961322
+2026-01-24 23:20: **********Train Epoch 4: MAE: 30.961322 RMSE: 40.628590 MAPE: 0.343804
+2026-01-24 23:20: **********Val Epoch 4: Average Loss: 19.287222
+2026-01-24 23:20: **********Val Epoch 4: MAE: 19.287222 RMSE: 28.191034 MAPE: 0.190887
+2026-01-24 23:20: *********************************Current best model saved!
+2026-01-24 23:20: Train Epoch 5: 0/185 Loss: 74.122116
+2026-01-24 23:20: Train Epoch 5: 20/185 Loss: 31.533278
+2026-01-24 23:20: Train Epoch 5: 40/185 Loss: 29.097507
+2026-01-24 23:20: Train Epoch 5: 60/185 Loss: 28.729378
+2026-01-24 23:20: Train Epoch 5: 80/185 Loss: 28.424480
+2026-01-24 23:20: Train Epoch 5: 100/185 Loss: 28.838984
+2026-01-24 23:20: Train Epoch 5: 120/185 Loss: 28.630306
+2026-01-24 23:20: Train Epoch 5: 140/185 Loss: 28.002640
+2026-01-24 23:20: Train Epoch 5: 160/185 Loss: 27.592739
+2026-01-24 23:20: Train Epoch 5: 180/185 Loss: 27.164713
+2026-01-24 23:20: **********Train Epoch 5: Average Loss: 30.159428
+2026-01-24 23:20: **********Train Epoch 5: MAE: 30.159428 RMSE: 39.482733 MAPE: 0.335217
+2026-01-24 23:20: Train Epoch 5: 0/185 Loss: 27.356844
+2026-01-24 23:21: Train Epoch 5: 20/185 Loss: 27.771303
+2026-01-24 23:21: Train Epoch 5: 40/185 Loss: 27.659666
+2026-01-24 23:21: Train Epoch 5: 60/185 Loss: 27.557747
+2026-01-24 23:21: Train Epoch 5: 80/185 Loss: 28.854456
+2026-01-24 23:21: Train Epoch 5: 100/185 Loss: 26.870562
+2026-01-24 23:21: Train Epoch 5: 120/185 Loss: 25.504738
+2026-01-24 23:21: Train Epoch 5: 140/185 Loss: 27.095688
+2026-01-24 23:21: Train Epoch 5: 160/185 Loss: 25.201963
+2026-01-24 23:21: Train Epoch 5: 180/185 Loss: 25.316965
+2026-01-24 23:21: **********Train Epoch 5: Average Loss: 26.669438
+2026-01-24 23:21: **********Train Epoch 5: MAE: 26.669438 RMSE: 35.662489 MAPE: 0.301778
+2026-01-24 23:21: **********Val Epoch 5: Average Loss: 16.852978
+2026-01-24 23:21: **********Val Epoch 5: MAE: 16.852978 RMSE: 25.780010 MAPE: 0.161501
+2026-01-24 23:21: *********************************Current best model saved!
+2026-01-24 23:21: Train Epoch 6: 0/185 Loss: 45.855129
+2026-01-24 23:21: Train Epoch 6: 20/185 Loss: 29.342567
+2026-01-24 23:21: Train Epoch 6: 40/185 Loss: 29.008064
+2026-01-24 23:21: Train Epoch 6: 60/185 Loss: 26.750652
+2026-01-24 23:21: Train Epoch 6: 80/185 Loss: 25.309946
+2026-01-24 23:21: Train Epoch 6: 100/185 Loss: 24.820559
+2026-01-24 23:21: Train Epoch 6: 120/185 Loss: 24.610474
+2026-01-24 23:21: Train Epoch 6: 140/185 Loss: 24.957052
+2026-01-24 23:22: Train Epoch 6: 160/185 Loss: 24.340872
+2026-01-24 23:22: Train Epoch 6: 180/185 Loss: 24.737799
+2026-01-24 23:22: **********Train Epoch 6: Average Loss: 28.170104
+2026-01-24 23:22: **********Train Epoch 6: MAE: 28.170104 RMSE: 37.004691 MAPE: 0.316462
+2026-01-24 23:22: Train Epoch 6: 0/185 Loss: 25.397808
+2026-01-24 23:22: Train Epoch 6: 20/185 Loss: 24.523149
+2026-01-24 23:22: Train Epoch 6: 40/185 Loss: 24.085024
+2026-01-24 23:22: Train Epoch 6: 60/185 Loss: 23.957090
+2026-01-24 23:22: Train Epoch 6: 80/185 Loss: 24.357698
+2026-01-24 23:22: Train Epoch 6: 100/185 Loss: 22.932615
+2026-01-24 23:22: Train Epoch 6: 120/185 Loss: 24.825916
+2026-01-24 23:22: Train Epoch 6: 140/185 Loss: 23.003094
+2026-01-24 23:22: Train Epoch 6: 160/185 Loss: 24.487444
+2026-01-24 23:22: Train Epoch 6: 180/185 Loss: 23.266735
+2026-01-24 23:22: **********Train Epoch 6: Average Loss: 24.080629
+2026-01-24 23:22: **********Train Epoch 6: MAE: 24.080629 RMSE: 32.740323 MAPE: 0.272861
+2026-01-24 23:22: **********Val Epoch 6: Average Loss: 17.427437
+2026-01-24 23:22: **********Val Epoch 6: MAE: 17.427437 RMSE: 26.588992 MAPE: 0.149875
+2026-01-24 23:22: Train Epoch 7: 0/185 Loss: 34.334084
+2026-01-24 23:22: Train Epoch 7: 20/185 Loss: 26.069309
+2026-01-24 23:22: Train Epoch 7: 40/185 Loss: 24.796124
+2026-01-24 23:22: Train Epoch 7: 60/185 Loss: 23.512447
+2026-01-24 23:22: Train Epoch 7: 80/185 Loss: 23.583675
+2026-01-24 23:22: Train Epoch 7: 100/185 Loss: 23.155643
+2026-01-24 23:22: Train Epoch 7: 120/185 Loss: 22.804190
+2026-01-24 23:23: Train Epoch 7: 140/185 Loss: 23.477037
+2026-01-24 23:23: Train Epoch 7: 160/185 Loss: 23.046358
+2026-01-24 23:23: Train Epoch 7: 180/185 Loss: 21.254665
+2026-01-24 23:23: **********Train Epoch 7: Average Loss: 25.380634
+2026-01-24 23:23: **********Train Epoch 7: MAE: 25.380634 RMSE: 33.910244 MAPE: 0.287365
+2026-01-24 23:23: Train Epoch 7: 0/185 Loss: 22.571920
+2026-01-24 23:23: Train Epoch 7: 20/185 Loss: 22.426039
+2026-01-24 23:23: Train Epoch 7: 40/185 Loss: 22.233061
+2026-01-24 23:23: Train Epoch 7: 60/185 Loss: 22.449615
+2026-01-24 23:23: Train Epoch 7: 80/185 Loss: 22.567310
+2026-01-24 23:23: Train Epoch 7: 100/185 Loss: 23.071028
+2026-01-24 23:23: Train Epoch 7: 120/185 Loss: 22.045431
+2026-01-24 23:23: Train Epoch 7: 140/185 Loss: 21.969793
+2026-01-24 23:23: Train Epoch 7: 160/185 Loss: 22.455187
+2026-01-24 23:23: Train Epoch 7: 180/185 Loss: 22.748831
+2026-01-24 23:23: **********Train Epoch 7: Average Loss: 22.330878
+2026-01-24 23:23: **********Train Epoch 7: MAE: 22.330878 RMSE: 30.865891 MAPE: 0.251569
+2026-01-24 23:23: **********Val Epoch 7: Average Loss: 18.414658
+2026-01-24 23:23: **********Val Epoch 7: MAE: 18.414658 RMSE: 26.763442 MAPE: 0.213970
+2026-01-24 23:23: Train Epoch 8: 0/185 Loss: 24.128813
+2026-01-24 23:23: Train Epoch 8: 20/185 Loss: 26.288208
+2026-01-24 23:23: Train Epoch 8: 40/185 Loss: 22.619619
+2026-01-24 23:23: Train Epoch 8: 60/185 Loss: 20.340059
+2026-01-24 23:23: Train Epoch 8: 80/185 Loss: 22.153263
+2026-01-24 23:23: Train Epoch 8: 100/185 Loss: 20.653234
+2026-01-24 23:23: Train Epoch 8: 120/185 Loss: 22.079908
+2026-01-24 23:24: Train Epoch 8: 140/185 Loss: 20.760790
+2026-01-24 23:24: Train Epoch 8: 160/185 Loss: 23.786093
+2026-01-24 23:24: Train Epoch 8: 180/185 Loss: 21.704529
+2026-01-24 23:24: **********Train Epoch 8: Average Loss: 22.468074
+2026-01-24 23:24: **********Train Epoch 8: MAE: 22.468074 RMSE: 30.922425 MAPE: 0.254321
+2026-01-24 23:24: Train Epoch 8: 0/185 Loss: 21.504457
+2026-01-24 23:24: Train Epoch 8: 20/185 Loss: 20.491955
+2026-01-24 23:24: Train Epoch 8: 40/185 Loss: 22.071079
+2026-01-24 23:24: Train Epoch 8: 60/185 Loss: 20.929136
+2026-01-24 23:24: Train Epoch 8: 80/185 Loss: 20.864002
+2026-01-24 23:24: Train Epoch 8: 100/185 Loss: 24.852890
+2026-01-24 23:24: Train Epoch 8: 120/185 Loss: 21.157495
+2026-01-24 23:24: Train Epoch 8: 140/185 Loss: 21.976587
+2026-01-24 23:24: Train Epoch 8: 160/185 Loss: 20.093447
+2026-01-24 23:24: Train Epoch 8: 180/185 Loss: 21.034466
+2026-01-24 23:24: **********Train Epoch 8: Average Loss: 21.214220
+2026-01-24 23:24: **********Train Epoch 8: MAE: 21.214220 RMSE: 29.612355 MAPE: 0.238133
+2026-01-24 23:24: **********Val Epoch 8: Average Loss: 15.583399
+2026-01-24 23:24: **********Val Epoch 8: MAE: 15.583399 RMSE: 24.605984 MAPE: 0.134180
+2026-01-24 23:24: *********************************Current best model saved!
+2026-01-24 23:24: Train Epoch 9: 0/185 Loss: 23.847504
+2026-01-24 23:24: Train Epoch 9: 20/185 Loss: 21.232729
+2026-01-24 23:24: Train Epoch 9: 40/185 Loss: 21.502392
+2026-01-24 23:24: Train Epoch 9: 60/185 Loss: 22.763983
+2026-01-24 23:24: Train Epoch 9: 80/185 Loss: 20.564810
+2026-01-24 23:24: Train Epoch 9: 100/185 Loss: 21.804152
+2026-01-24 23:24: Train Epoch 9: 120/185 Loss: 20.366198
+2026-01-24 23:25: Train Epoch 9: 140/185 Loss: 21.043505
+2026-01-24 23:25: Train Epoch 9: 160/185 Loss: 21.146931
+2026-01-24 23:25: Train Epoch 9: 180/185 Loss: 20.277504
+2026-01-24 23:25: **********Train Epoch 9: Average Loss: 20.905904
+2026-01-24 23:25: **********Train Epoch 9: MAE: 20.905904 RMSE: 29.315509 MAPE: 0.234044
+2026-01-24 23:25: Train Epoch 9: 0/185 Loss: 19.128975
+2026-01-24 23:25: Train Epoch 9: 20/185 Loss: 20.365229
+2026-01-24 23:25: Train Epoch 9: 40/185 Loss: 18.515774
+2026-01-24 23:25: Train Epoch 9: 60/185 Loss: 20.654139
+2026-01-24 23:25: Train Epoch 9: 80/185 Loss: 20.280495
+2026-01-24 23:25: Train Epoch 9: 100/185 Loss: 21.153938
+2026-01-24 23:25: Train Epoch 9: 120/185 Loss: 19.583427
+2026-01-24 23:25: Train Epoch 9: 140/185 Loss: 21.730320
+2026-01-24 23:25: Train Epoch 9: 160/185 Loss: 20.145018
+2026-01-24 23:25: Train Epoch 9: 180/185 Loss: 19.713808
+2026-01-24 23:25: **********Train Epoch 9: Average Loss: 20.313097
+2026-01-24 23:25: **********Train Epoch 9: MAE: 20.313097 RMSE: 28.728263 MAPE: 0.225500
+2026-01-24 23:25: **********Val Epoch 9: Average Loss: 15.483658
+2026-01-24 23:25: **********Val Epoch 9: MAE: 15.483658 RMSE: 24.458109 MAPE: 0.127907
+2026-01-24 23:25: *********************************Current best model saved!
+2026-01-24 23:25: Train Epoch 10: 0/185 Loss: 21.115866
+2026-01-24 23:25: Train Epoch 10: 20/185 Loss: 20.915255
+2026-01-24 23:25: Train Epoch 10: 40/185 Loss: 22.027979
+2026-01-24 23:25: Train Epoch 10: 60/185 Loss: 19.213089
+2026-01-24 23:25: Train Epoch 10: 80/185 Loss: 19.569115
+2026-01-24 23:25: Train Epoch 10: 100/185 Loss: 19.769875
+2026-01-24 23:26: Train Epoch 10: 120/185 Loss: 19.232889
+2026-01-24 23:26: Train Epoch 10: 140/185 Loss: 21.354668
+2026-01-24 23:26: Train Epoch 10: 160/185 Loss: 20.675823
+2026-01-24 23:26: Train Epoch 10: 180/185 Loss: 19.036625
+2026-01-24 23:26: **********Train Epoch 10: Average Loss: 20.225114
+2026-01-24 23:26: **********Train Epoch 10: MAE: 20.225114 RMSE: 28.569663 MAPE: 0.225802
+2026-01-24 23:26: Train Epoch 10: 0/185 Loss: 19.099783
+2026-01-24 23:26: Train Epoch 10: 20/185 Loss: 18.718885
+2026-01-24 23:26: Train Epoch 10: 40/185 Loss: 20.916885
+2026-01-24 23:26: Train Epoch 10: 60/185 Loss: 19.569645
+2026-01-24 23:26: Train Epoch 10: 80/185 Loss: 19.165871
+2026-01-24 23:26: Train Epoch 10: 100/185 Loss: 20.073406
+2026-01-24 23:26: Train Epoch 10: 120/185 Loss: 19.876356
+2026-01-24 23:26: Train Epoch 10: 140/185 Loss: 19.706249
+2026-01-24 23:26: Train Epoch 10: 160/185 Loss: 19.467472
+2026-01-24 23:26: Train Epoch 10: 180/185 Loss: 18.757923
+2026-01-24 23:26: **********Train Epoch 10: Average Loss: 19.637665
+2026-01-24 23:26: **********Train Epoch 10: MAE: 19.637665 RMSE: 28.007688 MAPE: 0.215554
+2026-01-24 23:26: **********Val Epoch 10: Average Loss: 15.974993
+2026-01-24 23:26: **********Val Epoch 10: MAE: 15.974993 RMSE: 24.699571 MAPE: 0.141059
+2026-01-24 23:26: Train Epoch 11: 0/185 Loss: 19.498945
+2026-01-24 23:26: Train Epoch 11: 20/185 Loss: 18.694307
+2026-01-24 23:26: Train Epoch 11: 40/185 Loss: 19.183784
+2026-01-24 23:26: Train Epoch 11: 60/185 Loss: 21.977388
+2026-01-24 23:26: Train Epoch 11: 80/185 Loss: 19.909939
+2026-01-24 23:27: Train Epoch 11: 100/185 Loss: 20.264065
+2026-01-24 23:27: Train Epoch 11: 120/185 Loss: 19.135050
+2026-01-24 23:27: Train Epoch 11: 140/185 Loss: 19.128510
+2026-01-24 23:27: Train Epoch 11: 160/185 Loss: 19.993217
+2026-01-24 23:27: Train Epoch 11: 180/185 Loss: 19.750801
+2026-01-24 23:27: **********Train Epoch 11: Average Loss: 19.513443
+2026-01-24 23:27: **********Train Epoch 11: MAE: 19.513443 RMSE: 27.890980 MAPE: 0.213803
+2026-01-24 23:27: Train Epoch 11: 0/185 Loss: 18.585649
+2026-01-24 23:27: Train Epoch 11: 20/185 Loss: 16.766863
+2026-01-24 23:27: Train Epoch 11: 40/185 Loss: 19.913261
+2026-01-24 23:27: Train Epoch 11: 60/185 Loss: 17.361668
+2026-01-24 23:27: Train Epoch 11: 80/185 Loss: 17.695751
+2026-01-24 23:27: Train Epoch 11: 100/185 Loss: 19.736948
+2026-01-24 23:27: Train Epoch 11: 120/185 Loss: 18.916082
+2026-01-24 23:27: Train Epoch 11: 140/185 Loss: 18.059755
+2026-01-24 23:27: Train Epoch 11: 160/185 Loss: 20.032957
+2026-01-24 23:27: Train Epoch 11: 180/185 Loss: 18.307596
+2026-01-24 23:27: **********Train Epoch 11: Average Loss: 19.025216
+2026-01-24 23:27: **********Train Epoch 11: MAE: 19.025216 RMSE: 27.412106 MAPE: 0.206484
+2026-01-24 23:27: **********Val Epoch 11: Average Loss: 17.592978
+2026-01-24 23:27: **********Val Epoch 11: MAE: 17.592978 RMSE: 26.233718 MAPE: 0.189663
+2026-01-24 23:27: Train Epoch 12: 0/185 Loss: 18.964371
+2026-01-24 23:27: Train Epoch 12: 20/185 Loss: 17.839861
+2026-01-24 23:27: Train Epoch 12: 40/185 Loss: 20.086405
+2026-01-24 23:27: Train Epoch 12: 60/185 Loss: 18.546186
+2026-01-24 23:27: Train Epoch 12: 80/185 Loss: 19.210403
+2026-01-24 23:28: Train Epoch 12: 100/185 Loss: 18.603151
+2026-01-24 23:28: Train Epoch 12: 120/185 Loss: 19.184750
+2026-01-24 23:28: Train Epoch 12: 140/185 Loss: 19.209703
+2026-01-24 23:28: Train Epoch 12: 160/185 Loss: 19.439327
+2026-01-24 23:28: Train Epoch 12: 180/185 Loss: 18.718754
+2026-01-24 23:28: **********Train Epoch 12: Average Loss: 18.904906
+2026-01-24 23:28: **********Train Epoch 12: MAE: 18.904906 RMSE: 27.294723 MAPE: 0.204916
+2026-01-24 23:28: Train Epoch 12: 0/185 Loss: 18.072741
+2026-01-24 23:28: Train Epoch 12: 20/185 Loss: 18.850510
+2026-01-24 23:28: Train Epoch 12: 40/185 Loss: 19.454088
+2026-01-24 23:28: Train Epoch 12: 60/185 Loss: 18.311371
+2026-01-24 23:28: Train Epoch 12: 80/185 Loss: 19.204277
+2026-01-24 23:28: Train Epoch 12: 100/185 Loss: 18.917332
+2026-01-24 23:28: Train Epoch 12: 120/185 Loss: 18.790762
+2026-01-24 23:28: Train Epoch 12: 140/185 Loss: 17.500507
+2026-01-24 23:28: Train Epoch 12: 160/185 Loss: 20.584702
+2026-01-24 23:28: Train Epoch 12: 180/185 Loss: 18.619804
+2026-01-24 23:28: **********Train Epoch 12: Average Loss: 18.973853
+2026-01-24 23:28: **********Train Epoch 12: MAE: 18.973853 RMSE: 27.310441 MAPE: 0.206937
+2026-01-24 23:28: **********Val Epoch 12: Average Loss: 16.059409
+2026-01-24 23:28: **********Val Epoch 12: MAE: 16.059409 RMSE: 24.877291 MAPE: 0.148080
+2026-01-24 23:28: Train Epoch 13: 0/185 Loss: 19.059721
+2026-01-24 23:28: Train Epoch 13: 20/185 Loss: 17.847553
+2026-01-24 23:28: Train Epoch 13: 40/185 Loss: 18.441908
+2026-01-24 23:28: Train Epoch 13: 60/185 Loss: 19.743559
+2026-01-24 23:29: Train Epoch 13: 80/185 Loss: 19.477608
+2026-01-24 23:29: Train Epoch 13: 100/185 Loss: 17.721205
+2026-01-24 23:29: Train Epoch 13: 120/185 Loss: 18.768930
+2026-01-24 23:29: Train Epoch 13: 140/185 Loss: 17.833645
+2026-01-24 23:29: Train Epoch 13: 160/185 Loss: 17.624685
+2026-01-24 23:29: Train Epoch 13: 180/185 Loss: 18.570631
+2026-01-24 23:29: **********Train Epoch 13: Average Loss: 18.591449
+2026-01-24 23:29: **********Train Epoch 13: MAE: 18.591449 RMSE: 26.954405 MAPE: 0.199674
+2026-01-24 23:29: Train Epoch 13: 0/185 Loss: 19.071884
+2026-01-24 23:29: Train Epoch 13: 20/185 Loss: 17.959248
+2026-01-24 23:29: Train Epoch 13: 40/185 Loss: 18.240005
+2026-01-24 23:29: Train Epoch 13: 60/185 Loss: 18.601131
+2026-01-24 23:29: Train Epoch 13: 80/185 Loss: 19.287930
+2026-01-24 23:29: Train Epoch 13: 100/185 Loss: 19.749733
+2026-01-24 23:29: Train Epoch 13: 120/185 Loss: 16.499659
+2026-01-24 23:29: Train Epoch 13: 140/185 Loss: 17.419081
+2026-01-24 23:29: Train Epoch 13: 160/185 Loss: 18.032047
+2026-01-24 23:29: Train Epoch 13: 180/185 Loss: 17.522682
+2026-01-24 23:29: **********Train Epoch 13: Average Loss: 18.169764
+2026-01-24 23:29: **********Train Epoch 13: MAE: 18.169764 RMSE: 26.550533 MAPE: 0.192954
+2026-01-24 23:29: **********Val Epoch 13: Average Loss: 15.835481
+2026-01-24 23:29: **********Val Epoch 13: MAE: 15.835481 RMSE: 24.516912 MAPE: 0.158704
+2026-01-24 23:29: Train Epoch 14: 0/185 Loss: 17.118811
+2026-01-24 23:29: Train Epoch 14: 20/185 Loss: 18.682114
+2026-01-24 23:29: Train Epoch 14: 40/185 Loss: 17.735998
+2026-01-24 23:29: Train Epoch 14: 60/185 Loss: 17.984186
+2026-01-24 23:30: Train Epoch 14: 80/185 Loss: 17.019960
+2026-01-24 23:30: Train Epoch 14: 100/185 Loss: 19.278378
+2026-01-24 23:30: Train Epoch 14: 120/185 Loss: 18.821619
+2026-01-24 23:30: Train Epoch 14: 140/185 Loss: 16.510452
+2026-01-24 23:30: Train Epoch 14: 160/185 Loss: 16.994234
+2026-01-24 23:30: Train Epoch 14: 180/185 Loss: 16.849115
+2026-01-24 23:30: **********Train Epoch 14: Average Loss: 18.017692
+2026-01-24 23:30: **********Train Epoch 14: MAE: 18.017692 RMSE: 26.444080 MAPE: 0.189899
+2026-01-24 23:30: Train Epoch 14: 0/185 Loss: 18.045244
+2026-01-24 23:30: Train Epoch 14: 20/185 Loss: 18.542332
+2026-01-24 23:30: Train Epoch 14: 40/185 Loss: 18.449902
+2026-01-24 23:30: Train Epoch 14: 60/185 Loss: 20.475641
+2026-01-24 23:30: Train Epoch 14: 80/185 Loss: 18.465075
+2026-01-24 23:30: Train Epoch 14: 100/185 Loss: 17.846947
+2026-01-24 23:30: Train Epoch 14: 120/185 Loss: 18.349876
+2026-01-24 23:30: Train Epoch 14: 140/185 Loss: 18.516253
+2026-01-24 23:30: Train Epoch 14: 160/185 Loss: 16.002762
+2026-01-24 23:30: Train Epoch 14: 180/185 Loss: 17.408497
+2026-01-24 23:30: **********Train Epoch 14: Average Loss: 17.985305
+2026-01-24 23:30: **********Train Epoch 14: MAE: 17.985305 RMSE: 26.371091 MAPE: 0.189622
+2026-01-24 23:30: **********Val Epoch 14: Average Loss: 17.194028
+2026-01-24 23:30: **********Val Epoch 14: MAE: 17.194028 RMSE: 26.179492 MAPE: 0.167866
+2026-01-24 23:30: Train Epoch 15: 0/185 Loss: 17.627060
+2026-01-24 23:30: Train Epoch 15: 20/185 Loss: 17.714256
+2026-01-24 23:30: Train Epoch 15: 40/185 Loss: 16.468012
+2026-01-24 23:31: Train Epoch 15: 60/185 Loss: 16.015398
+2026-01-24 23:31: Train Epoch 15: 80/185 Loss: 18.871552
+2026-01-24 23:31: Train Epoch 15: 100/185 Loss: 17.677961
+2026-01-24 23:31: Train Epoch 15: 120/185 Loss: 18.174255
+2026-01-24 23:31: Train Epoch 15: 140/185 Loss: 17.306927
+2026-01-24 23:31: Train Epoch 15: 160/185 Loss: 18.262619
+2026-01-24 23:31: Train Epoch 15: 180/185 Loss: 17.893114
+2026-01-24 23:31: **********Train Epoch 15: Average Loss: 17.798658
+2026-01-24 23:31: **********Train Epoch 15: MAE: 17.798658 RMSE: 26.227691 MAPE: 0.186771
+2026-01-24 23:31: Train Epoch 15: 0/185 Loss: 16.459742
+2026-01-24 23:31: Train Epoch 15: 20/185 Loss: 17.962337
+2026-01-24 23:31: Train Epoch 15: 40/185 Loss: 16.996428
+2026-01-24 23:31: Train Epoch 15: 60/185 Loss: 18.191145
+2026-01-24 23:31: Train Epoch 15: 80/185 Loss: 17.836769
+2026-01-24 23:31: Train Epoch 15: 100/185 Loss: 18.955957
+2026-01-24 23:31: Train Epoch 15: 120/185 Loss: 16.734278
+2026-01-24 23:31: Train Epoch 15: 140/185 Loss: 18.575443
+2026-01-24 23:31: Train Epoch 15: 160/185 Loss: 16.932537
+2026-01-24 23:31: Train Epoch 15: 180/185 Loss: 16.212696
+2026-01-24 23:31: **********Train Epoch 15: Average Loss: 17.644922
+2026-01-24 23:31: **********Train Epoch 15: MAE: 17.644922 RMSE: 26.086481 MAPE: 0.184112
+2026-01-24 23:31: **********Val Epoch 15: Average Loss: 15.728018
+2026-01-24 23:31: **********Val Epoch 15: MAE: 15.728018 RMSE: 24.509231 MAPE: 0.149355
+2026-01-24 23:31: Train Epoch 16: 0/185 Loss: 17.979990
+2026-01-24 23:31: Train Epoch 16: 20/185 Loss: 18.847044
+2026-01-24 23:32: Train Epoch 16: 40/185 Loss: 19.602070
+2026-01-24 23:32: Train Epoch 16: 60/185 Loss: 18.413702
+2026-01-24 23:32: Train Epoch 16: 80/185 Loss: 17.381977
+2026-01-24 23:32: Train Epoch 16: 100/185 Loss: 19.457487
+2026-01-24 23:32: Train Epoch 16: 120/185 Loss: 16.876925
+2026-01-24 23:32: Train Epoch 16: 140/185 Loss: 16.839111
+2026-01-24 23:32: Train Epoch 16: 160/185 Loss: 17.899914
+2026-01-24 23:32: Train Epoch 16: 180/185 Loss: 16.450546
+2026-01-24 23:32: **********Train Epoch 16: Average Loss: 17.598969
+2026-01-24 23:32: **********Train Epoch 16: MAE: 17.598969 RMSE: 26.037111 MAPE: 0.183243
+2026-01-24 23:32: Train Epoch 16: 0/185 Loss: 17.128227
+2026-01-24 23:32: Train Epoch 16: 20/185 Loss: 19.434313
+2026-01-24 23:32: Train Epoch 16: 40/185 Loss: 16.619484
+2026-01-24 23:32: Train Epoch 16: 60/185 Loss: 18.058449
+2026-01-24 23:32: Train Epoch 16: 80/185 Loss: 16.708157
+2026-01-24 23:32: Train Epoch 16: 100/185 Loss: 16.146786
+2026-01-24 23:32: Train Epoch 16: 120/185 Loss: 17.056656
+2026-01-24 23:32: Train Epoch 16: 140/185 Loss: 16.713470
+2026-01-24 23:32: Train Epoch 16: 160/185 Loss: 18.290617
+2026-01-24 23:32: Train Epoch 16: 180/185 Loss: 17.308485
+2026-01-24 23:32: **********Train Epoch 16: Average Loss: 17.476145
+2026-01-24 23:32: **********Train Epoch 16: MAE: 17.476145 RMSE: 25.915990 MAPE: 0.181507
+2026-01-24 23:32: **********Val Epoch 16: Average Loss: 15.220621
+2026-01-24 23:32: **********Val Epoch 16: MAE: 15.220621 RMSE: 24.316783 MAPE: 0.121005
+2026-01-24 23:32: *********************************Current best model saved!
+2026-01-24 23:32: Train Epoch 17: 0/185 Loss: 17.476538
+2026-01-24 23:33: Train Epoch 17: 20/185 Loss: 17.409100
+2026-01-24 23:33: Train Epoch 17: 40/185 Loss: 17.511600
+2026-01-24 23:33: Train Epoch 17: 60/185 Loss: 17.773912
+2026-01-24 23:33: Train Epoch 17: 80/185 Loss: 18.691914
+2026-01-24 23:33: Train Epoch 17: 100/185 Loss: 17.631538
+2026-01-24 23:33: Train Epoch 17: 120/185 Loss: 16.530216
+2026-01-24 23:33: Train Epoch 17: 140/185 Loss: 17.512331
+2026-01-24 23:33: Train Epoch 17: 160/185 Loss: 18.039804
+2026-01-24 23:33: Train Epoch 17: 180/185 Loss: 16.656326
+2026-01-24 23:33: **********Train Epoch 17: Average Loss: 17.247007
+2026-01-24 23:33: **********Train Epoch 17: MAE: 17.247007 RMSE: 25.741052 MAPE: 0.177269
+2026-01-24 23:33: Train Epoch 17: 0/185 Loss: 18.430773
+2026-01-24 23:33: Train Epoch 17: 20/185 Loss: 17.623085
+2026-01-24 23:33: Train Epoch 17: 40/185 Loss: 16.329525
+2026-01-24 23:33: Train Epoch 17: 60/185 Loss: 15.507093
+2026-01-24 23:33: Train Epoch 17: 80/185 Loss: 16.091150
+2026-01-24 23:33: Train Epoch 17: 100/185 Loss: 16.118494
+2026-01-24 23:33: Train Epoch 17: 120/185 Loss: 16.667149
+2026-01-24 23:33: Train Epoch 17: 140/185 Loss: 17.567221
+2026-01-24 23:33: Train Epoch 17: 160/185 Loss: 17.531384
+2026-01-24 23:33: Train Epoch 17: 180/185 Loss: 16.194506
+2026-01-24 23:33: **********Train Epoch 17: Average Loss: 17.118798
+2026-01-24 23:33: **********Train Epoch 17: MAE: 17.118798 RMSE: 25.595502 MAPE: 0.174643
+2026-01-24 23:33: **********Val Epoch 17: Average Loss: 15.268304
+2026-01-24 23:33: **********Val Epoch 17: MAE: 15.268304 RMSE: 24.128541 MAPE: 0.138957
+2026-01-24 23:34: Train Epoch 18: 0/185 Loss: 16.796434
+2026-01-24 23:34: Train Epoch 18: 20/185 Loss: 17.241337
+2026-01-24 23:34: Train Epoch 18: 40/185 Loss: 15.390800
+2026-01-24 23:34: Train Epoch 18: 60/185 Loss: 15.451195
+2026-01-24 23:34: Train Epoch 18: 80/185 Loss: 16.710060
+2026-01-24 23:34: Train Epoch 18: 100/185 Loss: 17.713026
+2026-01-24 23:34: Train Epoch 18: 120/185 Loss: 16.924740
+2026-01-24 23:34: Train Epoch 18: 140/185 Loss: 17.410488
+2026-01-24 23:34: Train Epoch 18: 160/185 Loss: 16.247910
+2026-01-24 23:34: Train Epoch 18: 180/185 Loss: 17.466763
+2026-01-24 23:34: **********Train Epoch 18: Average Loss: 17.035739
+2026-01-24 23:34: **********Train Epoch 18: MAE: 17.035739 RMSE: 25.506847 MAPE: 0.173535
+2026-01-24 23:34: Train Epoch 18: 0/185 Loss: 15.438414
+2026-01-24 23:34: Train Epoch 18: 20/185 Loss: 18.131052
+2026-01-24 23:34: Train Epoch 18: 40/185 Loss: 18.477110
+2026-01-24 23:34: Train Epoch 18: 60/185 Loss: 17.220741
+2026-01-24 23:34: Train Epoch 18: 80/185 Loss: 16.396172
+2026-01-24 23:34: Train Epoch 18: 100/185 Loss: 17.146872
+2026-01-24 23:34: Train Epoch 18: 120/185 Loss: 17.601278
+2026-01-24 23:34: Train Epoch 18: 140/185 Loss: 15.803700
+2026-01-24 23:34: Train Epoch 18: 160/185 Loss: 17.220221
+2026-01-24 23:34: Train Epoch 18: 180/185 Loss: 17.226286
+2026-01-24 23:34: **********Train Epoch 18: Average Loss: 16.798159
+2026-01-24 23:34: **********Train Epoch 18: MAE: 16.798159 RMSE: 25.284580 MAPE: 0.168951
+2026-01-24 23:34: **********Val Epoch 18: Average Loss: 16.234014
+2026-01-24 23:34: **********Val Epoch 18: MAE: 16.234014 RMSE: 24.530582 MAPE: 0.145357
+2026-01-24 23:35: Train Epoch 19: 0/185 Loss: 17.619692

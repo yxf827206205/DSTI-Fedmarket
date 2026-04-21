@@ -1,0 +1,177 @@
+2026-01-31 20:54: Experiment log path in: /root/autodl-tmp/ntk_project/ntk/log/in12_out6
+2026-01-31 20:54: Train: (11882, 12, 61, 3), (11882, 6, 61, 3)
+2026-01-31 20:54: Val: (1698, 12, 61, 3), (1698, 6, 61, 3)
+2026-01-31 20:54: Test: (3395, 12, 61, 3), (3395, 6, 61, 3)
+2026-01-31 20:54: memory_usage: (0.8115234375, 2.0)
+2026-01-31 20:54: Applying learning rate decay.
+2026-01-31 20:54: *****************Model Parameter*****************
+2026-01-31 20:54: data_l torch.Size([64]) True
+2026-01-31 20:54: tod_embedding_l torch.Size([32]) True
+2026-01-31 20:54: dow_embedding_l torch.Size([32]) True
+2026-01-31 20:54: tod_embedding.weight torch.Size([288, 32]) True
+2026-01-31 20:54: dow_embedding.weight torch.Size([7, 32]) True
+2026-01-31 20:54: SpatialEmbedding.B_sp torch.Size([307, 32]) True
+2026-01-31 20:54: SpatialEmbedding.B_su torch.Size([307, 32]) True
+2026-01-31 20:54: data_embedding.weight torch.Size([64, 1]) True
+2026-01-31 20:54: data_embedding.bias torch.Size([64]) True
+2026-01-31 20:54: MLPA.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-31 20:54: MLPA.blocks.0.linear.bias torch.Size([64]) True
+2026-01-31 20:54: MLPA.blocks.0.norm.weight torch.Size([64]) True
+2026-01-31 20:54: MLPA.blocks.0.norm.bias torch.Size([64]) True
+2026-01-31 20:54: MLPB.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-31 20:54: MLPB.blocks.0.linear.bias torch.Size([64]) True
+2026-01-31 20:54: MLPB.blocks.0.norm.weight torch.Size([64]) True
+2026-01-31 20:54: MLPB.blocks.0.norm.bias torch.Size([64]) True
+2026-01-31 20:54: MLPC.blocks.0.linear.weight torch.Size([64, 64]) True
+2026-01-31 20:54: MLPC.blocks.0.linear.bias torch.Size([64]) True
+2026-01-31 20:54: MLPC.blocks.0.norm.weight torch.Size([64]) True
+2026-01-31 20:54: MLPC.blocks.0.norm.bias torch.Size([64]) True
+2026-01-31 20:54: MLPD.blocks.0.linear.weight torch.Size([128, 128]) True
+2026-01-31 20:54: MLPD.blocks.0.linear.bias torch.Size([128]) True
+2026-01-31 20:54: MLPD.blocks.0.norm.weight torch.Size([128]) True
+2026-01-31 20:54: MLPD.blocks.0.norm.bias torch.Size([128]) True
+2026-01-31 20:54: MLPE.blocks.0.linear.weight torch.Size([192, 192]) True
+2026-01-31 20:54: MLPE.blocks.0.linear.bias torch.Size([192]) True
+2026-01-31 20:54: MLPE.blocks.0.norm.weight torch.Size([192]) True
+2026-01-31 20:54: MLPE.blocks.0.norm.bias torch.Size([192]) True
+2026-01-31 20:54: MLPE.blocks.1.linear.weight torch.Size([192, 192]) True
+2026-01-31 20:54: MLPE.blocks.1.linear.bias torch.Size([192]) True
+2026-01-31 20:54: MLPE.blocks.1.norm.weight torch.Size([192]) True
+2026-01-31 20:54: MLPE.blocks.1.norm.bias torch.Size([192]) True
+2026-01-31 20:54: MLPE.blocks.2.linear.weight torch.Size([192, 192]) True
+2026-01-31 20:54: MLPE.blocks.2.linear.bias torch.Size([192]) True
+2026-01-31 20:54: MLPE.blocks.2.norm.weight torch.Size([192]) True
+2026-01-31 20:54: MLPE.blocks.2.norm.bias torch.Size([192]) True
+2026-01-31 20:54: MLPF.blocks.0.linear.weight torch.Size([12, 12]) True
+2026-01-31 20:54: MLPF.blocks.0.linear.bias torch.Size([12]) True
+2026-01-31 20:54: MLPF.blocks.0.norm.weight torch.Size([12]) True
+2026-01-31 20:54: MLPF.blocks.0.norm.bias torch.Size([12]) True
+2026-01-31 20:54: MLPF.blocks.1.linear.weight torch.Size([12, 12]) True
+2026-01-31 20:54: MLPF.blocks.1.linear.bias torch.Size([12]) True
+2026-01-31 20:54: MLPF.blocks.1.norm.weight torch.Size([12]) True
+2026-01-31 20:54: MLPF.blocks.1.norm.bias torch.Size([12]) True
+2026-01-31 20:54: steps_linear.weight torch.Size([6, 12]) True
+2026-01-31 20:54: steps_linear.bias torch.Size([6]) True
+2026-01-31 20:54: out_linear.weight torch.Size([1, 192]) True
+2026-01-31 20:54: out_linear.bias torch.Size([1]) True
+2026-01-31 20:54: gcn.filter_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-31 20:54: gcn.filter_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.filter_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-31 20:54: gcn.filter_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.filter_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-31 20:54: gcn.filter_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.filter_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-31 20:54: gcn.filter_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.filter_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-31 20:54: gcn.filter_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.filter_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-31 20:54: gcn.filter_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.filter_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-31 20:54: gcn.filter_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.filter_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-31 20:54: gcn.filter_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.gate_convs.0.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-31 20:54: gcn.gate_convs.0.tconv.0.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.gate_convs.0.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-31 20:54: gcn.gate_convs.0.tconv.1.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.gate_convs.0.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-31 20:54: gcn.gate_convs.0.tconv.2.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.gate_convs.0.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-31 20:54: gcn.gate_convs.0.tconv.3.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.gate_convs.1.tconv.0.weight torch.Size([4, 16, 1, 2]) True
+2026-01-31 20:54: gcn.gate_convs.1.tconv.0.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.gate_convs.1.tconv.1.weight torch.Size([4, 16, 1, 3]) True
+2026-01-31 20:54: gcn.gate_convs.1.tconv.1.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.gate_convs.1.tconv.2.weight torch.Size([4, 16, 1, 6]) True
+2026-01-31 20:54: gcn.gate_convs.1.tconv.2.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.gate_convs.1.tconv.3.weight torch.Size([4, 16, 1, 7]) True
+2026-01-31 20:54: gcn.gate_convs.1.tconv.3.bias torch.Size([4]) True
+2026-01-31 20:54: gcn.residual_convs.0.weight torch.Size([16, 16, 1, 1]) True
+2026-01-31 20:54: gcn.residual_convs.0.bias torch.Size([16]) True
+2026-01-31 20:54: gcn.residual_convs.1.weight torch.Size([16, 16, 1, 1]) True
+2026-01-31 20:54: gcn.residual_convs.1.bias torch.Size([16]) True
+2026-01-31 20:54: gcn.skip_convs.0.weight torch.Size([32, 16, 1, 7]) True
+2026-01-31 20:54: gcn.skip_convs.0.bias torch.Size([32]) True
+2026-01-31 20:54: gcn.skip_convs.1.weight torch.Size([32, 16, 1, 1]) True
+2026-01-31 20:54: gcn.skip_convs.1.bias torch.Size([32]) True
+2026-01-31 20:54: gcn.gconv1.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-31 20:54: gcn.gconv1.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-31 20:54: gcn.gconv1.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-31 20:54: gcn.gconv1.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-31 20:54: gcn.gconv2.0.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-31 20:54: gcn.gconv2.0.mlp.mlp.bias torch.Size([16]) True
+2026-01-31 20:54: gcn.gconv2.1.mlp.mlp.weight torch.Size([16, 48, 1, 1]) True
+2026-01-31 20:54: gcn.gconv2.1.mlp.mlp.bias torch.Size([16]) True
+2026-01-31 20:54: gcn.norm.0.weight torch.Size([16, 61, 7]) True
+2026-01-31 20:54: gcn.norm.0.bias torch.Size([16, 61, 7]) True
+2026-01-31 20:54: gcn.norm.1.weight torch.Size([16, 61, 1]) True
+2026-01-31 20:54: gcn.norm.1.bias torch.Size([16, 61, 1]) True
+2026-01-31 20:54: gcn.start_conv.weight torch.Size([16, 1, 1, 1]) True
+2026-01-31 20:54: gcn.start_conv.bias torch.Size([16]) True
+2026-01-31 20:54: gcn.gc.emb1.weight torch.Size([61, 10]) True
+2026-01-31 20:54: gcn.gc.emb2.weight torch.Size([61, 10]) True
+2026-01-31 20:54: gcn.gc.lin1.weight torch.Size([10, 10]) True
+2026-01-31 20:54: gcn.gc.lin1.bias torch.Size([10]) True
+2026-01-31 20:54: gcn.gc.lin2.weight torch.Size([10, 10]) True
+2026-01-31 20:54: gcn.gc.lin2.bias torch.Size([10]) True
+2026-01-31 20:54: gcn.end_conv_1.weight torch.Size([64, 32, 1, 1]) True
+2026-01-31 20:54: gcn.end_conv_1.bias torch.Size([64]) True
+2026-01-31 20:54: gcn.end_conv_2.weight torch.Size([6, 64, 1, 1]) True
+2026-01-31 20:54: gcn.end_conv_2.bias torch.Size([6]) True
+2026-01-31 20:54: gcn.skip0.weight torch.Size([32, 1, 1, 13]) True
+2026-01-31 20:54: gcn.skip0.bias torch.Size([32]) True
+2026-01-31 20:54: gcn.skipE.weight torch.Size([32, 16, 1, 1]) True
+2026-01-31 20:54: gcn.skipE.bias torch.Size([32]) True
+2026-01-31 20:54: Total params num: 205021
+2026-01-31 20:54: *****************Finish Parameter****************
+2026-01-31 20:54: Train Epoch 1: 0/185 Loss: 2099.589355
+2026-01-31 20:54: Train Epoch 1: 20/185 Loss: 259.165771
+2026-01-31 20:54: Train Epoch 1: 40/185 Loss: 198.859604
+2026-01-31 20:54: Train Epoch 1: 60/185 Loss: 177.676102
+2026-01-31 20:54: Train Epoch 1: 80/185 Loss: 154.548630
+2026-01-31 20:54: Train Epoch 1: 100/185 Loss: 140.370209
+2026-01-31 20:54: Train Epoch 1: 120/185 Loss: 127.060654
+2026-01-31 20:54: Train Epoch 1: 140/185 Loss: 118.022369
+2026-01-31 20:54: Train Epoch 1: 160/185 Loss: 107.407722
+2026-01-31 20:54: Train Epoch 1: 180/185 Loss: 98.929260
+2026-01-31 20:54: **********Train Epoch 1: Average Loss: 206.879445
+2026-01-31 20:54: **********Train Epoch 1: MAE: 207.378727 RMSE: 265.110066 MAPE: 0.965123
+2026-01-31 20:54: Train Epoch 1: 0/185 Loss: 95.446503
+2026-01-31 20:54: Train Epoch 1: 20/185 Loss: 89.811386
+2026-01-31 20:54: Train Epoch 1: 40/185 Loss: 82.630013
+2026-01-31 20:54: Train Epoch 1: 60/185 Loss: 77.178291
+2026-01-31 20:54: Train Epoch 1: 80/185 Loss: 72.696999
+2026-01-31 20:54: Train Epoch 1: 100/185 Loss: 68.030754
+2026-01-31 20:54: Train Epoch 1: 120/185 Loss: 63.583832
+2026-01-31 20:54: Train Epoch 1: 140/185 Loss: 59.959198
+2026-01-31 20:54: Train Epoch 1: 160/185 Loss: 58.080471
+2026-01-31 20:54: Train Epoch 1: 180/185 Loss: 53.041973
+2026-01-31 20:54: **********Train Epoch 1: Average Loss: 71.360213
+2026-01-31 20:54: **********Train Epoch 1: MAE: 71.858648 RMSE: 92.092311 MAPE: 0.604784
+2026-01-31 20:54: Train Epoch 1: 0/185 Loss: 53.306126
+2026-01-31 20:55: Train Epoch 1: 20/185 Loss: 49.074955
+2026-01-31 20:55: Train Epoch 1: 40/185 Loss: 49.338818
+2026-01-31 20:55: Train Epoch 1: 60/185 Loss: 46.432812
+2026-01-31 20:55: Train Epoch 1: 80/185 Loss: 45.208172
+2026-01-31 20:55: Train Epoch 1: 100/185 Loss: 44.207314
+2026-01-31 20:55: Train Epoch 1: 120/185 Loss: 41.256035
+2026-01-31 20:55: Train Epoch 1: 140/185 Loss: 40.499123
+2026-01-31 20:55: Train Epoch 1: 160/185 Loss: 41.640865
+2026-01-31 20:55: Train Epoch 1: 180/185 Loss: 39.752174
+2026-01-31 20:55: **********Train Epoch 1: Average Loss: 44.895531
+2026-01-31 20:55: **********Train Epoch 1: MAE: 45.393003 RMSE: 59.278954 MAPE: 0.444654
+2026-01-31 20:55: Train Epoch 1: 0/185 Loss: 37.855946
+2026-01-31 20:55: Train Epoch 1: 20/185 Loss: 36.296177
+2026-01-31 20:55: Train Epoch 1: 40/185 Loss: 34.628109
+2026-01-31 20:55: Train Epoch 1: 60/185 Loss: 36.225136
+2026-01-31 20:55: Train Epoch 1: 80/185 Loss: 35.472389
+2026-01-31 20:55: Train Epoch 1: 100/185 Loss: 33.252533
+2026-01-31 20:55: Train Epoch 1: 120/185 Loss: 33.506203
+2026-01-31 20:55: Train Epoch 1: 140/185 Loss: 32.151726
+2026-01-31 20:55: Train Epoch 1: 160/185 Loss: 32.468338
+2026-01-31 20:56: Train Epoch 1: 180/185 Loss: 33.878002
+2026-01-31 20:56: **********Train Epoch 1: Average Loss: 34.735800
+2026-01-31 20:56: **********Train Epoch 1: MAE: 35.232471 RMSE: 46.971404 MAPE: 0.365359
+2026-01-31 20:56: **********Val Epoch 1: Average Loss: 23.448098
+2026-01-31 20:56: **********Val Epoch 1: MAE: 23.941751 RMSE: 34.759285 MAPE: 0.205093
+2026-01-31 20:56: *********************************Current best model saved!

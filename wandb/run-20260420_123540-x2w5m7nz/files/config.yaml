@@ -1,0 +1,593 @@
+_wandb:
+    value:
+        cli_version: 0.26.0
+        e:
+            retpvn5j1u9xszb0geg6ilq3shvezqve:
+                args:
+                    - --dataset
+                    - PeMSD4FLOW
+                    - --exp_mode
+                    - FED
+                    - --device
+                    - cuda:0
+                    - --cid
+                    - "1"
+                    - --fedavg
+                    - --num_clients
+                    - "5"
+                    - -sip
+                    - 127.0.0.1
+                    - -sp
+                    - "50030"
+                    - -cp
+                    - "50031"
+                    - --compression_rate
+                    - "0.10"
+                    - --device
+                    - cuda:0
+                    - --lag
+                    - "24"
+                    - --horizon
+                    - "12"
+                    - --in_steps
+                    - "24"
+                    - --out_steps
+                    - "12"
+                    - --local_epochs
+                    - "4"
+                    - --use_wandb
+                    - --wandb_project
+                    - STCIM-Fed
+                    - --wandb_entity
+                    - yxf827206205-shandong-university
+                    - --wandb_run_name
+                    - PeMSD4FLOW_c1_0420_1235
+                codePath: client.py
+                codePathLocal: client.py
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "32212254720"
+                        used: "17598853120"
+                email: yxf827206205@163.com
+                executable: /root/miniconda3/bin/python
+                git:
+                    commit: 916db0c484f45658ccd065d0e44b91f109f0f252
+                    remote: git@github.com:yxf827206205/DSTI-Fedmarket.git
+                gpu: NVIDIA GeForce RTX 4090 D
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 14592
+                      memoryTotal: "25757220864"
+                      name: NVIDIA GeForce RTX 4090 D
+                      uuid: GPU-c224dcfb-21e2-0f1e-a1f5-1b41e2630a3e
+                host: autodl-container-qvadxau6nv-a5e95716
+                memory:
+                    total: "540638674944"
+                os: Linux-5.15.0-78-generic-x86_64-with-glibc2.35
+                program: /root/autodl-tmp/ntk_project/ntk/client.py
+                python: CPython 3.12.3
+                root: /root/autodl-tmp/ntk_project/ntk
+                startedAt: "2026-04-20T04:35:40.763272Z"
+                writerId: retpvn5j1u9xszb0geg6ilq3shvezqve
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 16
+                - 41
+            "4": 3.12.3
+            "5": 0.26.0
+            "10":
+                - 20
+            "12": 0.26.0
+            "13": linux-x86_64
+accelerate:
+    value: true
+act_k:
+    value: 2
+active_mode:
+    value: softmax
+batch_size:
+    value: 64
+cheb_k:
+    value: 3
+cid:
+    value: 1
+column_wise:
+    value: false
+compression_rate:
+    value: 0.1
+cuda:
+    value: true
+dataset:
+    value: PeMSD4FLOW
+debug:
+    value: false
+device:
+    value: cuda:0
+divide:
+    value: metis
+dow_embedding_dim:
+    value: 32
+dsp:
+    value: 32
+dsu:
+    value: 32
+early_stop:
+    value: false
+early_stop_patience:
+    value: 15
+embed_dim:
+    value: 64
+epochs:
+    value: 100
+exp_mode:
+    value: FED
+fedavg:
+    value: true
+grad_norm:
+    value: true
+horizon:
+    value: 12
+in_steps:
+    value: 24
+input_dim:
+    value: 1
+lag:
+    value: 24
+local_epochs:
+    value: 4
+log_dir:
+    value: /root/autodl-tmp/ntk_project/ntk/log/in24_out12
+log_step:
+    value: 20
+logger:
+    value: <RootLogger root (DEBUG)>
+loss_func:
+    value: huber
+lr_decay:
+    value: true
+lr_decay_rate:
+    value: 0.5
+lr_decay_step:
+    value: 1,50,80
+lr_init:
+    value: 0.001
+mae_thresh:
+    value: null
+mape_thresh:
+    value: 0
+max_grad_norm:
+    value: 5
+mode:
+    value: train
+nodes:
+    value:
+        - 1
+        - 13
+        - 25
+        - 26
+        - 27
+        - 30
+        - 31
+        - 46
+        - 50
+        - 67
+        - 69
+        - 70
+        - 76
+        - 94
+        - 98
+        - 100
+        - 113
+        - 119
+        - 120
+        - 122
+        - 124
+        - 126
+        - 136
+        - 139
+        - 140
+        - 142
+        - 145
+        - 164
+        - 174
+        - 176
+        - 178
+        - 182
+        - 186
+        - 187
+        - 189
+        - 191
+        - 193
+        - 195
+        - 197
+        - 199
+        - 200
+        - 205
+        - 215
+        - 216
+        - 217
+        - 218
+        - 219
+        - 228
+        - 238
+        - 244
+        - 248
+        - 250
+        - 252
+        - 253
+        - 255
+        - 256
+        - 279
+        - 280
+        - 296
+        - 303
+        - 305
+nodes_per:
+    value:
+        - - 1
+          - 13
+          - 25
+          - 26
+          - 27
+          - 30
+          - 31
+          - 46
+          - 50
+          - 67
+          - 69
+          - 70
+          - 76
+          - 94
+          - 98
+          - 100
+          - 113
+          - 119
+          - 120
+          - 122
+          - 124
+          - 126
+          - 136
+          - 139
+          - 140
+          - 142
+          - 145
+          - 164
+          - 174
+          - 176
+          - 178
+          - 182
+          - 186
+          - 187
+          - 189
+          - 191
+          - 193
+          - 195
+          - 197
+          - 199
+          - 200
+          - 205
+          - 215
+          - 216
+          - 217
+          - 218
+          - 219
+          - 228
+          - 238
+          - 244
+          - 248
+          - 250
+          - 252
+          - 253
+          - 255
+          - 256
+          - 279
+          - 280
+          - 296
+          - 303
+          - 305
+        - - 3
+          - 4
+          - 8
+          - 11
+          - 15
+          - 19
+          - 34
+          - 35
+          - 36
+          - 38
+          - 47
+          - 51
+          - 54
+          - 59
+          - 60
+          - 61
+          - 64
+          - 65
+          - 66
+          - 78
+          - 86
+          - 102
+          - 111
+          - 115
+          - 116
+          - 125
+          - 135
+          - 155
+          - 156
+          - 157
+          - 158
+          - 159
+          - 160
+          - 161
+          - 162
+          - 163
+          - 214
+          - 224
+          - 225
+          - 229
+          - 230
+          - 231
+          - 232
+          - 235
+          - 236
+          - 246
+          - 247
+          - 249
+          - 264
+          - 265
+          - 266
+          - 267
+          - 281
+          - 282
+          - 283
+          - 285
+          - 286
+          - 287
+          - 288
+          - 300
+          - 304
+        - - 9
+          - 10
+          - 14
+          - 22
+          - 23
+          - 32
+          - 37
+          - 49
+          - 52
+          - 71
+          - 74
+          - 75
+          - 84
+          - 87
+          - 88
+          - 89
+          - 91
+          - 93
+          - 101
+          - 103
+          - 104
+          - 107
+          - 108
+          - 112
+          - 123
+          - 127
+          - 129
+          - 130
+          - 134
+          - 137
+          - 146
+          - 165
+          - 166
+          - 167
+          - 168
+          - 170
+          - 171
+          - 173
+          - 201
+          - 208
+          - 209
+          - 210
+          - 211
+          - 212
+          - 220
+          - 221
+          - 226
+          - 227
+          - 239
+          - 240
+          - 241
+          - 259
+          - 260
+          - 261
+          - 262
+          - 268
+          - 270
+          - 297
+          - 298
+          - 302
+          - 306
+        - - 0
+          - 5
+          - 7
+          - 18
+          - 28
+          - 33
+          - 39
+          - 42
+          - 43
+          - 44
+          - 55
+          - 56
+          - 57
+          - 58
+          - 62
+          - 68
+          - 72
+          - 73
+          - 80
+          - 82
+          - 85
+          - 92
+          - 95
+          - 96
+          - 97
+          - 110
+          - 117
+          - 118
+          - 121
+          - 128
+          - 131
+          - 132
+          - 133
+          - 143
+          - 148
+          - 150
+          - 152
+          - 154
+          - 169
+          - 175
+          - 177
+          - 179
+          - 181
+          - 183
+          - 184
+          - 185
+          - 203
+          - 207
+          - 213
+          - 223
+          - 234
+          - 242
+          - 243
+          - 251
+          - 254
+          - 263
+          - 269
+          - 271
+          - 274
+          - 290
+          - 293
+          - 299
+        - - 2
+          - 6
+          - 12
+          - 16
+          - 17
+          - 20
+          - 21
+          - 24
+          - 29
+          - 40
+          - 41
+          - 45
+          - 48
+          - 53
+          - 63
+          - 77
+          - 79
+          - 81
+          - 83
+          - 90
+          - 99
+          - 105
+          - 106
+          - 109
+          - 114
+          - 138
+          - 141
+          - 144
+          - 147
+          - 149
+          - 151
+          - 153
+          - 172
+          - 180
+          - 188
+          - 190
+          - 192
+          - 194
+          - 196
+          - 198
+          - 202
+          - 204
+          - 206
+          - 222
+          - 233
+          - 237
+          - 245
+          - 257
+          - 258
+          - 272
+          - 273
+          - 275
+          - 276
+          - 277
+          - 278
+          - 284
+          - 289
+          - 291
+          - 292
+          - 294
+          - 295
+          - 301
+normalizer:
+    value: std
+num_client_nodes:
+    value: 61
+num_clients:
+    value: 5
+num_layers:
+    value: 2
+num_nodes:
+    value: 307
+num_runs:
+    value: 1
+out_steps:
+    value: 12
+output_dim:
+    value: 1
+plot:
+    value: false
+real_value:
+    value: true
+rnn_units:
+    value: 64
+seed:
+    value: 12
+self_port:
+    value: 50031
+server_ip:
+    value: 127.0.0.1
+server_port:
+    value: 50030
+socket:
+    value: <lib.client_socket.ClientSocket object at 0x7f000d584fb0>
+steps_per_day:
+    value: 288
+test_ratio:
+    value: 0.2
+tod_embedding_dim:
+    value: 32
+use_wandb:
+    value: true
+val_ratio:
+    value: 0.1
+wandb_entity:
+    value: yxf827206205-shandong-university
+wandb_project:
+    value: STCIM-Fed
+wandb_run_name:
+    value: PeMSD4FLOW_c1_0420_1235

@@ -1,0 +1,80 @@
+{
+  "os": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-04-20T04:35:40.763272Z",
+  "args": [
+    "--dataset",
+    "PeMSD4FLOW",
+    "--exp_mode",
+    "FED",
+    "--device",
+    "cuda:0",
+    "--cid",
+    "1",
+    "--fedavg",
+    "--num_clients",
+    "5",
+    "-sip",
+    "127.0.0.1",
+    "-sp",
+    "50030",
+    "-cp",
+    "50031",
+    "--compression_rate",
+    "0.10",
+    "--device",
+    "cuda:0",
+    "--lag",
+    "24",
+    "--horizon",
+    "12",
+    "--in_steps",
+    "24",
+    "--out_steps",
+    "12",
+    "--local_epochs",
+    "4",
+    "--use_wandb",
+    "--wandb_project",
+    "STCIM-Fed",
+    "--wandb_entity",
+    "yxf827206205-shandong-university",
+    "--wandb_run_name",
+    "PeMSD4FLOW_c1_0420_1235"
+  ],
+  "program": "/root/autodl-tmp/ntk_project/ntk/client.py",
+  "codePath": "client.py",
+  "codePathLocal": "client.py",
+  "git": {
+    "remote": "git@github.com:yxf827206205/DSTI-Fedmarket.git",
+    "commit": "916db0c484f45658ccd065d0e44b91f109f0f252"
+  },
+  "email": "yxf827206205@163.com",
+  "root": "/root/autodl-tmp/ntk_project/ntk",
+  "host": "autodl-container-qvadxau6nv-a5e95716",
+  "executable": "/root/miniconda3/bin/python",
+  "cpu_count": 64,
+  "cpu_count_logical": 128,
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "32212254720",
+      "used": "17598853120"
+    }
+  },
+  "memory": {
+    "total": "540638674944"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "memoryTotal": "25757220864",
+      "cudaCores": 14592,
+      "architecture": "Ada",
+      "uuid": "GPU-c224dcfb-21e2-0f1e-a1f5-1b41e2630a3e"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "retpvn5j1u9xszb0geg6ilq3shvezqve"
+}
