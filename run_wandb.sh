@@ -17,8 +17,8 @@ DEVICE="${2:-cuda:1}"          # 默认 GPU (cuda:1 has more VRAM)
 NUM_CLIENTS=${3:-5}           # 可通过第3个参数覆盖
 SERVER_PORT=${4:-50030}       # 可通过第4个参数覆盖
 COMPRESSION=0.10
-LOCAL_EPOCHS=4
-WANDB_PROJECT="STCIM-Fed-v2"  # wandb 项目名
+LOCAL_EPOCHS=6
+WANDB_PROJECT="STCIM-Fed-v3-le6"  # wandb 项目名 (local_epochs=6)
 WANDB_ENTITY="yxf827206205-shandong-university"    # wandb team 名
 
 # 根据数据集自动设置参数
